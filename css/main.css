@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: #ECEDF1;
+}
+
 button {
   outline: none;
   border: none;
@@ -218,7 +222,7 @@ header .container .img_content_box .col:nth-of-type(2)::before {
 header .container .img_content_box .col:nth-of-type(2) .stop {
   position: absolute;
   right: 70px;
-  top: 70px;
+  top: -120px;
   width: 80px;
   z-index: 1;
 }
@@ -391,4 +395,40 @@ header .container .content_box .card_box .card:hover {
 }
 header .container .content_box .card_box .card:hover img {
   transform: scale(1.08);
+}
+header .container .content_cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+header .container .content_cards .card {
+  position: relative;
+  background: var(--color-light);
+  border-radius: 20px;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  display: flex;
+  min-height: 200px;
+  width: 100%;
+}
+header .container .content_cards .card img {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 71% 43%, 33% 99%, 0 100%);
+  border-radius: 10px;
+  position: absolute;
+  top: -30px;
+}
+header .container .content_cards .card .card_data {
+  z-index: 1;
+  padding: 30px;
+  width: 310px;
+  margin-left: auto;
+  position: relative;
+  border-radius: 20px;
+  background: #fff;
+}
+header .container .content_cards .card .card_data .title {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
