@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img { width: 100%; }
+
+a { text-decoration: none; }
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    // outline: 1px solid;
+    margin: 0 auto;
+    padding: 20px;
+}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+:root {
+  --color-primary: #4951FF;
+  --color-secondary: #B1B1B1;
+  --color-light: #fff;
+  --color-dark: #000;
+}
+
+nav {
+  padding: 15px;
+}
+nav .container {
+  background: var(--color-light);
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+}
+nav .logo {
+  margin: 0 10px;
+  height: 40px;
+}
+nav .logo img {
+  width: 120px;
+  object-fit: cover;
+}
+nav .nav_list {
+  display: flex;
+  min-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nav_list li {
+  margin: 0 15px;
+}
+nav .nav_list li a {
+  color: var(--color-dark);
+  font-weight: 500;
+  font-size: 16px;
+}
+nav .nav_list li a.test {
+  padding: 10px 30px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-light);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+nav .nav_list li a.test:hover {
+  background: var(--color-light);
+  border: 1px solid var(--color-primary);
+  color: var(--color-dark);
+}
+@media (max-width: 768px) {
+  nav .nav_list {
+    flex-direction: column;
+    background: var(--color-dark);
+    opacity: 0.9;
+    backdrop-filter: blure(5px);
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    right: 0;
+    top: 0;
+    min-height: 100dvh;
+  }
+  nav .nav_list.active_menu {
+    transform: translateX(0%);
+  }
+  nav .nav_list li a {
+    color: var(--color-light);
+  }
+}
+@media (max-width: 480px) {
+  nav .nav_list {
+    min-width: 80%;
+  }
+}
+nav .mobile_btn {
+  display: none;
+  transition: all 0.6s ease-in-out;
+}
+@media (max-width: 768px) {
+  nav .mobile_btn {
+    display: block;
+    z-index: 11;
+    top: 20px;
+    right: 20px;
+  }
+}
+nav .mobile_btn img {
+  width: 30px;
+}
+
+header {
+  background: #a11c1c;
+  min-height: 200vh;
+}
