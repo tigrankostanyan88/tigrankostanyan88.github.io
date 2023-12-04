@@ -18,7 +18,7 @@ nav {
     .logo {
         margin: 0 10px;
         height: 40px;
-
+        cursor: pointer;
         img {
             width: 120px;
             object-fit: cover;
@@ -35,12 +35,10 @@ nav {
         z-index: 100;
         li {
             margin: 0 15px;
-
             a {
                 color: var(--color-dark);
                 font-weight: 500;
                 font-size: 16px;
-
                 &.test {
                     @include buttonStyle(10px, 30px)
                 }
@@ -87,7 +85,6 @@ nav {
             top: 20px;
             right: 20px;
         }
-
         img {
             width: 30px;
         }
@@ -117,66 +114,250 @@ header {
     .container {
         width: 100%;
         padding: 0;
-       .img_content_box {
-        min-height: 700px;
-        display: grid;
-        grid-template-columns: 20% auto;
-        background: url('../imgs/header/WAY.png') no-repeat;
-        background-size: 1000px;
-        background-position-y: -100px;
-        background-position-x: 290px;
-        .col {
-           
-            &.sfetophor {
-                position: relative;
-                img {
-                    position: absolute;
-                    top: 100px;
-                    left: 100px;
-                    width: 180px;
-                }
-            }
-            img {
-                width: 600px;
-                // @media(max-width: 992px) {
-                //     width: 600px;
-                //     position: relative;
-                //     left: -50px;
-                // }
-                @media(max-width: 576px) {
-                    width: 400px;
-                }
-                object-fit: contain;
-                z-index: 2;
-            }
-            &:nth-of-type(2) {
-                position: relative;
-                &::before {
-                    content: '';
-                    width: 100%;
-                    left: -30%;
-                    height: 600px;
-                    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,0,0,0) 95%);
-                    position: absolute;
-                    z-index: -1;
-                    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-                    clip-path: polygon(47% 0, 100% 0%, 50% 100%, 0% 100%);
-                }
+        .img_content_box {
+            min-height: 600px;
+            display: grid;
+            grid-template-columns: 20% auto;
+            background: url('../imgs/header/WAY.png') no-repeat;
+            background-size: 1000px;
+            background-position-y: -100px;
+            background-position-x: 290px;
+            .col {
+                &.sfetophor {
+                    position: relative;
 
-                position: relative;
+                    img {
+                        position: absolute;
+                        top: -40px;
+                        left: 100px;
+                        width: 180px;
+                    }
+                }
+                img {
+                    width: 600px;
+
+                    @media(max-width: 576px) {
+                        width: 400px;
+                    }
+
+                    object-fit: contain;
+                    z-index: 2;
+                }
+                &:nth-of-type(2) {
+                    position: relative;
+
+                    .phone {
+                        font-weight: bold;
+                        position: absolute;
+                        top: 40px;
+                        font-size: 20px;
+                        color: var(--color-dark);
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        left: -30%;
+                        height: 750px;
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 95%);
+                        position: absolute;
+                        z-index: -1;
+                        // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                        clip-path: polygon(47% 0, 100% 0%, 50% 100%, 0% 100%);
+                    }
+
                     .stop {
                         position: absolute;
                         right: 70px;
-                        top: 110px;
-                        width: 100px;
+                        top: 70px;
+                        width: 80px;
                         z-index: 1;
                     }
 
-                display: grid;
-                align-items: center;
-                grid-template-columns: auto auto;
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: auto auto;
+                }
             }
         }
-       } 
+
+        .content_box {
+            min-height: 100px;
+            position: relative;
+            top: -100px;
+            display: grid;
+            padding: 15px;
+            grid-template-columns: 70% auto;
+            gap: 20px;
+            @media(max-width: 1200px) {
+                grid-template-columns: auto;
+            }
+ 
+            .card_info {
+                border-radius: 20px;
+                padding: 30px;
+                background: linear-gradient(90deg, var(--color-primary) 0%, #4952ff3e 90%);
+                font-size: 18px;
+                color: var(--color-light);
+                clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+                line-height: 1.3;
+                backdrop-filter: blure(5px);
+                position: relative;
+                overflow: hidden;
+                @media(max-width: 576px) {
+                    max-width: 100%;
+                    padding: 15px;
+                background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 90%);
+
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+                }
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    border-radius: 20px;
+                    transform: perspective(1000px);
+                    width: 50%;
+                    height: 90%;
+                    z-index: -1;
+                    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
+                    background: rgba(34, 48, 120, 0.485);
+                    transition: all .6s ease-in-out;
+                }
+
+                &::after {
+                    width: 90%;
+                    background: rgba(34, 48, 120, 0);
+                }
+
+                &:hover {
+                    &::before {
+                        width: 90%;
+                    }
+
+                    &::after {
+                        width: 60%;
+                        background: rgba(34, 48, 120, 0.485);
+                        z-index: 1;
+                    }
+
+                    .image {
+                        padding: 5px;
+                        img {
+                            filter: blur(8px);
+                            -webkit-filter: blur(4px);
+                        }
+                    }
+                }
+              
+                .descr {
+                    max-width: 50%;
+                    position: relative;
+                    z-index: 2;
+                    @media(max-width: 768px) {
+                        max-width: 100%;
+                    }
+                }
+                .title {
+                    color: var(--color-light);
+                    font-size: 40px;
+                    letter-spacing: 1.4px;
+                    position: relative;
+                    z-index: 3;
+                }
+                .subtitle {
+                    margin-bottom: 30px;
+                    color: var(--color-secondary);
+                    letter-spacing: 1.4px;
+                }
+
+                .image {
+                    padding: 5px;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    width: 700px;
+                    height: 500px;
+                    clip-path: polygon(65% 0%, 100% 0%, 75% 100%, 0% 100%);
+                    border-radius: 20px;
+                    img { object-fit: cover; }
+                    @media(max-width: 576px) {
+                        clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 0% 100%);
+                        top: -5px;
+                        right: -5px;
+                    }
+                }
+            }
+
+            .card_box {
+                @media(max-width: 1200px) {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                }
+                @media(max-width: 576px) {
+                    display: grid;
+                    grid-template-columns: auto;
+                }
+                .card {
+                    margin-bottom: 15px;
+                    min-height: 40px;
+                    z-index: 2;
+                    position: relative;
+                    align-items: center;
+
+                    .title {
+                        font-size: 23px;
+                        cursor: pointer;
+                        color: var(--color-light);
+                        z-index: 1;
+                    }
+
+                    .icon {
+                        margin-left: auto;
+                        color: var(--color-dark);
+                        z-index: 1;
+                        font-weight: bold;
+                        margin-right: 30px;
+                    }
+
+                    &::before {
+                        border-radius: 10px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        content: '';
+                        width: 90%;
+                        height: 100%;
+                        background: linear-gradient(270deg, var(--color-primary), #4952ff3e 90%);
+                        @include shadow();
+                    }
+
+                    display: flex;
+                    transition: all .3s ease-in;
+
+                    img {
+                        width: 120px;
+                        height: 80px;
+                        clip-path: polygon(45% 0%, 100% 0%, 75% 100%, 0% 100%);
+                        border-radius: 20px;
+                        object-fit: cover;
+                        border: 2px solid var(--color-primary);
+                        padding: 12px;
+                        transition: all .3s ease-in-out;
+                    }
+
+                    &:hover {
+                        transform: scale(1.03);
+
+                        img {
+                            transform: scale(1.08);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
