@@ -171,6 +171,13 @@ header .container .img_content_box .col.sfetophor img {
   left: 100px;
   width: 180px;
 }
+@media (max-width: 576px) {
+  header .container .img_content_box .col.sfetophor img {
+    left: 30px;
+    width: 140px;
+    top: -35px;
+  }
+}
 header .container .img_content_box .col img {
   width: 600px;
   object-fit: contain;
@@ -186,6 +193,10 @@ header .container .img_content_box .col:nth-of-type(2) {
   display: grid;
   align-items: center;
   grid-template-columns: auto auto;
+}
+header .container .img_content_box .col:nth-of-type(2) .car_1 {
+  position: relative;
+  left: -50px;
 }
 header .container .img_content_box .col:nth-of-type(2) .phone {
   font-weight: bold;
