@@ -60,6 +60,8 @@ nav .nav_list {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
 }
 nav .nav_list li {
   margin: 0 15px;
@@ -116,7 +118,7 @@ nav .mobile_btn {
 @media (max-width: 768px) {
   nav .mobile_btn {
     display: block;
-    z-index: 11;
+    z-index: 151;
     top: 20px;
     right: 20px;
   }
@@ -124,8 +126,80 @@ nav .mobile_btn {
 nav .mobile_btn img {
   width: 30px;
 }
+nav .mask {
+  display: none;
+  z-index: 9;
+}
+@media (max-width: 768px) {
+  nav .mask.active {
+    position: fixed;
+    display: inline;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.2705882353);
+    backdrop-filter: blur(5px);
+  }
+}
 
 header {
-  background: #a11c1c;
-  min-height: 200vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+header .container {
+  width: 100%;
+  padding: 0;
+}
+header .container .img_content_box {
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 20% auto;
+  background: url("../imgs/header/WAY.png") no-repeat;
+  background-size: 1000px;
+  background-position-y: -100px;
+  background-position-x: 290px;
+}
+header .container .img_content_box .col.sfetophor {
+  position: relative;
+}
+header .container .img_content_box .col.sfetophor img {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 180px;
+}
+header .container .img_content_box .col img {
+  width: 600px;
+  object-fit: contain;
+  z-index: 2;
+}
+@media (max-width: 576px) {
+  header .container .img_content_box .col img {
+    width: 400px;
+  }
+}
+header .container .img_content_box .col:nth-of-type(2) {
+  position: relative;
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+}
+header .container .img_content_box .col:nth-of-type(2)::before {
+  content: "";
+  width: 100%;
+  left: -30%;
+  height: 600px;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 0, 0, 0) 95%);
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(47% 0, 100% 0%, 50% 100%, 0% 100%);
+}
+header .container .img_content_box .col:nth-of-type(2) .stop {
+  position: absolute;
+  right: 70px;
+  top: 110px;
+  width: 100px;
+  z-index: 1;
 }

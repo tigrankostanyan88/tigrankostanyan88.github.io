@@ -5,6 +5,7 @@
 
 nav {
     padding: 15px;
+
     .container {
         background: var(--color-light);
         border-radius: 100px;
@@ -17,6 +18,7 @@ nav {
     .logo {
         margin: 0 10px;
         height: 40px;
+
         img {
             width: 120px;
             object-fit: cover;
@@ -29,7 +31,8 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        position: relative;
+        z-index: 100;
         li {
             margin: 0 15px;
 
@@ -68,6 +71,7 @@ nav {
                 }
             }
         }
+
         @media(max-width: 480px) {
             min-width: 80%;
         }
@@ -79,7 +83,7 @@ nav {
 
         @media(max-width: 768px) {
             display: block;
-            z-index: 11;
+            z-index: 151;
             top: 20px;
             right: 20px;
         }
@@ -88,9 +92,91 @@ nav {
             width: 30px;
         }
     }
+
+    .mask {
+        display: none;
+        z-index: 9;
+        @media(max-width: 768px) {
+            &.active {
+                position: fixed;
+                display: inline;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100dvh;
+                background: #00000045;
+                backdrop-filter: blur(5px);
+            }
+        }
+    }
 }
 
 header {
-    background: #a11c1c;
-    min-height: 200vh;
+    min-height: 100vh;
+    overflow: hidden;
+    .container {
+        width: 100%;
+        padding: 0;
+       .img_content_box {
+        min-height: 700px;
+        display: grid;
+        grid-template-columns: 20% auto;
+        background: url('../imgs/header/WAY.png') no-repeat;
+        background-size: 1000px;
+        background-position-y: -100px;
+        background-position-x: 290px;
+        .col {
+           
+            &.sfetophor {
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 100px;
+                    left: 100px;
+                    width: 180px;
+                }
+            }
+            img {
+                width: 600px;
+                // @media(max-width: 992px) {
+                //     width: 600px;
+                //     position: relative;
+                //     left: -50px;
+                // }
+                @media(max-width: 576px) {
+                    width: 400px;
+                }
+                object-fit: contain;
+                z-index: 2;
+            }
+            &:nth-of-type(2) {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    left: -30%;
+                    height: 600px;
+                    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,0,0,0) 95%);
+                    position: absolute;
+                    z-index: -1;
+                    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                    clip-path: polygon(47% 0, 100% 0%, 50% 100%, 0% 100%);
+                }
+
+                position: relative;
+                    .stop {
+                        position: absolute;
+                        right: 70px;
+                        top: 110px;
+                        width: 100px;
+                        z-index: 1;
+                    }
+
+                display: grid;
+                align-items: center;
+                grid-template-columns: auto auto;
+            }
+        }
+       } 
+    }
 }
