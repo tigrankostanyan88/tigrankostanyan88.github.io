@@ -11,6 +11,8 @@ a { text-decoration: none; }
 
 body {
     background: #ECEDF1;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
 }
 
 button {
@@ -23,9 +25,18 @@ ul {
     list-style: none;
 }
 
+header {
+    img {
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+}
+
 .container {
     max-width: 1440px;
-    // outline: 1px solid;
     margin: 0 auto;
     padding: 20px;
 }
