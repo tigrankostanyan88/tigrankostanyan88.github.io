@@ -369,16 +369,30 @@ header {
         .content_cards {
             display: grid;
             grid-template-columns: auto auto auto;
+            @media(max-width: 768px) { 
+                grid-template-columns: auto auto;
+            }
+            @media(max-width: 576px) { 
+                grid-template-columns: auto;
+            }
             gap: 20px;
+            padding: 30px;
             .card {
-                // background: var(--color-light);
                 position: relative;
+                margin-bottom: 30px;
+                margin: 0 auto;
+                width: 90%;
+                border-top: 1px solid var(--color-primary);
                 background: var(--color-light);
                 border-radius: 20px;
                 @include shadow();
                 display: flex;
                 min-height: 200px;
-                width: 100%;
+               &:hover {
+                img {
+                    top: 0;
+                }
+               }
                 img {
                     height: 200px;
                     width: 250px;
@@ -387,21 +401,34 @@ header {
                     border-radius: 10px;
                     position: absolute;
                     top: -30px;
+                    transition: all .4s ease-in-out;
                 }
 
                 .card_data {
-                    // background: #dbdbdb;
                     z-index: 1;
                     padding: 30px;
-                    width: 310px;
+                    max-width: 310px;
                     margin-left: auto;
                     position: relative;
                     border-radius: 20px;
-                    background: #fff;
-                    // filter: blur(8px)
+                    background: #ffffff35;
+                    backdrop-filter: blur(5px);
+                    border-bottom: 1px solid var(--color-primary);
                     .title {
                         font-size: 30px;
                         margin-bottom: 15px;
+                        color: var(--color-primary);
+                        @include textShadow()
+                    }
+                    .descr {
+                        margin-bottom: 30px;
+                    }
+                    .btns {
+                        .btn {
+                            @include buttonStyle(10px, 15px);
+                            font-size: 14px;
+                            letter-spacing: 1.3px;
+                        }
                     }
                 }
             }

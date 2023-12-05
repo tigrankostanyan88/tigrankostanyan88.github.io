@@ -85,6 +85,7 @@ nav .nav_list li a.test {
   color: var(--color-light);
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
 }
 nav .nav_list li a.test:hover {
   background: var(--color-light);
@@ -400,15 +401,32 @@ header .container .content_cards {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  header .container .content_cards {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 576px) {
+  header .container .content_cards {
+    grid-template-columns: auto;
+  }
 }
 header .container .content_cards .card {
   position: relative;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  width: 90%;
+  border-top: 1px solid var(--color-primary);
   background: var(--color-light);
   border-radius: 20px;
   box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
   display: flex;
   min-height: 200px;
-  width: 100%;
+}
+header .container .content_cards .card:hover img {
+  top: 0;
 }
 header .container .content_cards .card img {
   height: 200px;
@@ -418,17 +436,42 @@ header .container .content_cards .card img {
   border-radius: 10px;
   position: absolute;
   top: -30px;
+  transition: all 0.4s ease-in-out;
 }
 header .container .content_cards .card .card_data {
   z-index: 1;
   padding: 30px;
-  width: 310px;
+  max-width: 310px;
   margin-left: auto;
   position: relative;
   border-radius: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2078431373);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid var(--color-primary);
 }
 header .container .content_cards .card .card_data .title {
   font-size: 30px;
   margin-bottom: 15px;
+  color: var(--color-primary);
+  text-shadow: 10px 5px 6px rgba(0, 0, 0, 0.4);
+}
+header .container .content_cards .card .card_data .descr {
+  margin-bottom: 30px;
+}
+header .container .content_cards .card .card_data .btns .btn {
+  padding: 10px 15px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-light);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  font-size: 14px;
+  letter-spacing: 1.3px;
+}
+header .container .content_cards .card .card_data .btns .btn:hover {
+  background: var(--color-light);
+  border: 1px solid var(--color-primary);
+  color: var(--color-dark);
 }

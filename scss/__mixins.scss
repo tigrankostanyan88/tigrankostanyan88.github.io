@@ -1,6 +1,9 @@
 @mixin shadow() {
     box-shadow: 3px 5px 10px 5px #11111111;
 }
+@mixin textShadow() {
+    text-shadow: 10px 5px 6px rgba(0,0,0,0.4);
+}
 
 @mixin buttonStyle($x, $y) {
     padding: $x $y;
@@ -10,7 +13,7 @@
     color: var(--color-light);
     transition: all .4s ease-in-out;
     cursor: pointer;
-
+    @include shadow();
     &:hover {
         background: var(--color-light);
         border: 1px solid var(--color-primary);
