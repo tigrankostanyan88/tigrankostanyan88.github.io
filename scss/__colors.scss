@@ -1,7 +1,12 @@
 :root {
     --color-main: #ECEDF1;
-    --color-primary: #4951FF;
+    --color-linear-primary: linear-gradient(to top right, #444BF7, #8084f9);
+    --color-primary: #444BF7;
     --color-secondary: #B1B1B1;
     --color-light: #f1f1f1;
     --color-dark: #000;
 }
+
+
+// linear-gradient(to top right, #444BF7, #8084f9);
+// #8084F9 . #5E63F8
