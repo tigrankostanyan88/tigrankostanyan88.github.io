@@ -570,6 +570,7 @@ header {
 .about {
     position: relative;
     min-height: 120dvh;
+    margin-bottom: 200px;
     overflow: hidden;
     padding: 50px;
     @media(max-width: 768px) {
@@ -650,7 +651,7 @@ header {
                  p {
                     margin-bottom: 15px;
                  }
-                border-radius: 20px; 
+                border-radius: 20px;
             }
         }
         .content_body {
@@ -790,6 +791,152 @@ header {
             height: 80px;
             bottom: 100px;
             left: 420px;
+        }
+    }
+}
+
+.VSCard_section {
+    min-height: 500px;
+    margin-bottom: 200px;
+    outline: 1px solid red;
+    display: grid;
+    place-content: center;
+    .card {
+        max-width: 500px;
+        height: 280px;
+        border-radius: 15px;
+        @include linearShadow();
+        margin-bottom: 30px;
+        overflow: hidden;
+        background: var(--color-linear-primary);
+        color: var(--color-light);
+        position: relative;
+        cursor: pointer;
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: 0%;
+            top: 0;
+            left: 0;
+            clip-path: circle(0.4% at 50% 50%);
+            transition: all .8s ease-in-out;
+            background: var(--color-light);
+            z-index: -1;
+        }
+        &.card_front {
+            z-index: 1;
+            display: flex;
+            position: relative;
+            top: 100px;
+            right: 100px;
+            box-shadow: 5px 20px 15px 5px #444af777;
+            transform: rotateZ(30deg);
+            transition: all .5s ease-in-out;
+            .content {
+                transition: all .9s ease-in-out;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .logo {
+                    a {
+                        display: block;
+                        font-weight: bold;
+                        color: var(--color-dark);
+                        font-size: 30px;
+                    }
+                }
+            }
+            .picture {
+                clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+        &.card_back {
+            transform: skewX(-20deg) skewY(-2deg);
+            max-height: 250px;
+            box-shadow: 25px 20px 30px 5px #444af777;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all .5s ease-in-out;
+            .card_footer, .card_head {
+                border-radius: 5px;
+                padding: 10px;
+            }
+            .card_head {
+                .data {
+                    .title {
+                        font-size: 25px;
+                    }
+                    span {
+                        color: var(--color-secondary);
+                    }
+                }
+                display: flex;
+                justify-content: space-between;
+                .qr {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                }
+            }
+            .card_body {
+                color: var(--color-secondary);
+            }
+            .card_footer {
+                background: var(--color-dark);
+                min-height: 50px;
+                display: flex;
+                justify-content: space-between;
+                transition: all .4s ease-in-out;
+            }
+            &:hover {
+                &::before {
+                    background: var(--color-dark);
+                }
+                .card_footer {
+                    transition: all .4s ease-in-out;
+                    background: var(--color-primary);
+                } 
+            }
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+                height: 100%;
+                clip-path: circle(100% at 50% 50%);
+            }
+            &.card_front  {
+                color: var(--color-dark);
+            }
+            &.card_back {
+                z-index: 2;
+            }           
+        }
+        @media(max-width: 992px) {
+            &.card_front {
+                top: 0;
+                right: 0; 
+            }
+        }
+        @media(max-width: 768px) {
+            &.card_front {
+                transform: rotateZ(0);
+      
+            }
+            &.card_back {
+                transform: rotateZ(0);
+                min-height: 340px;
+            }
         }
     }
 }
