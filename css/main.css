@@ -1057,3 +1057,98 @@ header .container .content_cards .card .card_data .btns .btn:hover {
     min-height: 340px;
   }
 }
+
+.out_team .title {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.out_team .tem_cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-content: center;
+  gap: 30px;
+}
+@media (max-width: 992px) {
+  .out_team .tem_cards {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 768px) {
+  .out_team .tem_cards {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 576px) {
+  .out_team .tem_cards {
+    grid-template-columns: auto;
+  }
+}
+.out_team .tem_cards .card {
+  max-width: 300px;
+  min-height: 335px;
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+.out_team .tem_cards .card img {
+  transition: all 0.4s ease-in;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  margin: 15px auto;
+  clip-path: polygon(0 0, 64% 0, 100% 100%, 29% 100%);
+}
+.out_team .tem_cards .card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: var(--color-linear-primary);
+}
+.out_team .tem_cards .card .user_info {
+  background: linear-gradient(13deg, var(--color-primary) 0%, rgba(17, 17, 17, 0.2470588235) 90%);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  clip-path: polygon(0 0, 90% 0, 74% 100%, 0 100%, 0% 40%);
+  border-bottom-left-radius: 0;
+  transition: all 0.4s ease-in;
+  height: 105px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: var(--color-light);
+}
+.out_team .tem_cards .card .user_info h5 {
+  margin-bottom: 1px;
+  font-size: 20px;
+}
+.out_team .tem_cards .card .user_info .profession {
+  margin-bottom: 10px;
+  color: var(--color-dark);
+}
+.out_team .tem_cards .card .user_info .social {
+  margin-bottom: 15px;
+}
+.out_team .tem_cards .card .user_info .social a {
+  padding: 5px;
+  color: var(--color-secondary);
+}
+.out_team .tem_cards .card .descr {
+  max-width: 95%;
+}
+.out_team .tem_cards .card:hover .user_info {
+  height: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0% 40%);
+}
+.out_team .tem_cards .card:hover img {
+  transform: scale(1.03);
+}
