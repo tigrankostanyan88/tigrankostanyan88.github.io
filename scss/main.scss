@@ -1368,7 +1368,7 @@ header {
             }
         }
         .contact_data {
-            padding: 30px;
+            padding: 10px;
             position: relative;
 
             .card_data {
@@ -1478,12 +1478,21 @@ header {
     place-content: center;
     .container {
         display: grid;
+        margin: 10px;
         grid-template-columns: auto auto;
+        @media(max-width: 768px) {
+            grid-template-columns: auto
+        }
         max-width: 1200px;
         background: var(--color-linear-primary);
         border-radius: 20px;
         position: relative;
         @include linearShadow();
+        .picture {
+            img {
+                object-fit: contain;
+            }
+        }
         &::after {
             transition: all .6s ease-in-out;
         }
@@ -1532,12 +1541,19 @@ header {
             color: var(--color-light);
             @include linearShadow();
             padding: 30px;
+            @media(max-width: 576px) {
+                left: 0;
+                padding: 0;
+            }
             .title {
                 font-size: 30px;
             }
             .descr {
                 max-width: 80%;
                 margin-bottom: 20px;
+                @media(max-width: 576px) {
+                    max-width: 100%
+                }
             }
             .btn {
                 @include buttonStyle(10px, 25px);
@@ -1557,4 +1573,55 @@ header {
 footer {
     min-height: 100px;
     background: var(--color-dark);
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto 30%;
+        @media(max-width: 768px) {
+            grid-template-columns: 30% auto auto;
+        }
+        @media(max-width: 576px) {
+            grid-template-columns: auto auto;
+        }
+        @media(max-width: 580px) {
+            grid-template-columns: auto;
+        }
+        .col {
+            justify-content: center;
+            display: flex;
+            outline: 1px solid blue;
+            .logo {
+                width: 200px;
+                object-fit: contain;
+                @media(max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            padding: 15px;
+            ul {
+                margin-top: 50px;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        color: var(--color-secondary);
+                    }
+                }
+            }
+            .subScribe {
+                background: #222;
+                padding: 30px;
+                border-radius: 10px;
+                @include linearShadow();
+                .social {
+                    margin-bottom: 15px;
+                    a {
+                        font-size: 20px;
+                        color: var(--color-light);
+                    }
+                }
+                .descr {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+    }
 }
