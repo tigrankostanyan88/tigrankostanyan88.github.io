@@ -800,6 +800,7 @@ header {
                 @media(max-width: 576px) {
                     grid-template-columns: auto
                 }
+
                 gap: 20px;
                 max-width: 500px;
                 position: relative;
@@ -853,15 +854,18 @@ header {
                     right: 50px;
                 }
             }
+
             &:nth-of-type(2) {
                 top: 50px;
 
                 @media(max-width: 576px) {
                     display: none;
                 }
+
                 left: -150px;
                 width: 250px;
             }
+
             &:nth-of-type(3) {
                 top: 350px;
                 right: -100px;
@@ -869,23 +873,27 @@ header {
             }
         }
     }
+
     .circle {
         border-radius: 50%;
         background: var(--color-linear-primary);
         position: absolute;
         z-index: -1;
+
         &:nth-of-type(1) {
             width: 25px;
             height: 25px;
             bottom: 0;
             left: 500px;
         }
+
         &:nth-of-type(2) {
             width: 50px;
             height: 50px;
             bottom: 35px;
             left: 460px;
         }
+
         &:nth-of-type(3) {
             width: 80px;
             height: 80px;
@@ -1327,6 +1335,7 @@ header {
         min-width: 100%;
         padding: 0;
     }
+
     &_gallery {
         display: grid;
         grid-template-columns: repeat(5, auto);
@@ -1349,6 +1358,7 @@ header {
             grid-template-columns: repeat(2, auto)
         }
     }
+
     &_info {
         display: grid;
         grid-template-columns: 60% auto;
@@ -1360,13 +1370,16 @@ header {
         @media(max-width: 768px) {
             grid-template-columns: auto;
         }
+
         min-height: 500px;
+
         .contact_map {
             iframe {
                 width: 100%;
                 height: 100%;
             }
         }
+
         .contact_data {
             padding: 10px;
             position: relative;
@@ -1471,34 +1484,190 @@ header {
     }
 }
 
+.quiz_query {
+    margin-bottom: 100px;
+    .container {
+        .app {
+            background: var(--color-linear-primary);
+            @include linearShadow();
+            width: 90%;
+            max-width: 900px;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+
+            @media(max-width: 768px) {
+                padding: 10px;
+                width: 100%;
+            }
+
+            .quiz_num {
+                position: absolute;
+                right: -20px;
+                top: -20px;
+                // padding: 15px;
+                font-size: 20px;
+                @include shadow();
+                display: block;
+                color: var(--color-light);
+                background: var(--color-linear-primary);
+                display: grid;
+                transition: all .4s ease-in-out;
+                place-content: center;
+                border-radius: 100%;
+            }
+
+            h2 {
+                font-weight: 25px;
+                color: var(--color-light);
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #333;
+                padding-bottom: 30px;
+            }
+
+            .quiz {
+                padding: 10px 0;
+
+                .question {
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    @include shadow();
+                    margin-bottom: 25px;
+
+                    @media(max-width: 768px) {
+                        font-size: 15px;
+                    }
+                }
+
+                h2 {
+                    font-size: 18px;
+                    color: var(--color-light);
+                    margin-bottom: 15px;
+                }
+
+                .btn {
+                    @include linearShadow();
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    color: var(--color-secondary);
+                    padding: 20px 30px;
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    transition: all .5s ease-in-out;
+
+                    &:hover:not([disabled]) {
+                        color: #ccc;
+                    }
+
+                    &:disabled {
+                        cursor: no-drop;
+                    }
+                }
+
+                .btn-next {
+                    @include buttonStyle(10px, 20px);
+                    background: var(--color-linear-primary);
+                }
+
+                .answer-butttons {
+                    margin-bottom: 15px;
+
+                    .correct {
+                        background: var(--color-primary);
+                        position: relative;
+                        color: var(--color-light);
+
+                        &::after {
+                            content: '👌';
+                            position: absolute;
+                            font-size: 30px;
+                            top: 10px;
+                            right: 0;
+                        }
+                    }
+
+                    .incorrect {
+                        background: var(--color-linear-danger);
+                        position: relative;
+                        color: var(--color-light);
+
+                        &::after {
+                            content: '😪';
+                            position: absolute;
+                            font-size: 30px;
+                            top: 10px;
+                            right: 0;
+                        }
+                    }
+                }
+
+                .result {
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        margin-bottom: 15px;
+                        font-size: 25px;
+
+                        @media(max-width: 576px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .testimonial {
     min-height: 100dvh;
     overflow: hidden;
     display: grid;
     place-content: center;
+
     .container {
         display: grid;
         margin: 10px;
         grid-template-columns: auto auto;
+
         @media(max-width: 768px) {
             grid-template-columns: auto
         }
+
         max-width: 1200px;
         background: var(--color-linear-primary);
         border-radius: 20px;
         position: relative;
         @include linearShadow();
+
         .picture {
             img {
                 object-fit: contain;
             }
         }
+
         &::after {
             transition: all .6s ease-in-out;
         }
+
         &::before {
             transition: all .8s ease-in-out;
         }
+
         &::after,
         &::before {
             content: '';
@@ -1513,23 +1682,29 @@ header {
             border-radius: 20px;
             box-shadow: -20px 20px 10px 5px #33333356;
         }
+
         &::after {
             left: -100px;
             top: 30px;
             height: 80%;
         }
+
         &:hover {
+
             &::after,
             &::before {
                 box-shadow: 20px 20px 10px 5px #33333356;
             }
+
             &::before {
                 left: 14.2%;
             }
+
             &::after {
                 left: 18.3%;
             }
         }
+
         .info {
             position: absolute;
             transition: all .5s ease-in-out;
@@ -1541,26 +1716,32 @@ header {
             color: var(--color-light);
             @include linearShadow();
             padding: 30px;
+
             @media(max-width: 576px) {
                 left: 0;
                 padding: 0;
             }
+
             .title {
                 font-size: 30px;
             }
+
             .descr {
                 max-width: 80%;
                 margin-bottom: 20px;
+
                 @media(max-width: 576px) {
                     max-width: 100%
                 }
             }
+
             .btn {
                 @include buttonStyle(10px, 25px);
                 @include shadow();
                 background: var(--color-linear-primary);
             }
         }
+
         &:hover {
             .info {
                 left: 0;
@@ -1573,51 +1754,66 @@ header {
 footer {
     min-height: 100px;
     background: var(--color-dark);
+
     .container {
         display: grid;
         grid-template-columns: auto auto auto 30%;
+
         @media(max-width: 768px) {
             grid-template-columns: 30% auto auto;
         }
+
         @media(max-width: 576px) {
             grid-template-columns: auto auto;
         }
+
         @media(max-width: 580px) {
             grid-template-columns: auto;
         }
+
         .col {
             justify-content: center;
             display: flex;
             outline: 1px solid blue;
+
             .logo {
                 width: 200px;
                 object-fit: contain;
+
                 @media(max-width: 768px) {
                     width: 100%;
                 }
             }
+
             padding: 15px;
+
             ul {
                 margin-top: 50px;
+
                 li {
                     margin-bottom: 5px;
+
                     a {
                         color: var(--color-secondary);
                     }
                 }
             }
+
             .subScribe {
                 background: #222;
                 padding: 30px;
                 border-radius: 10px;
                 @include linearShadow();
+
                 .social {
                     margin-bottom: 15px;
+
                     a {
                         font-size: 20px;
                         color: var(--color-light);
                     }
                 }
+
                 .descr {
                     color: var(--color-secondary);
                 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +47,7 @@ header img {
 :root {
   --color-main: #ECEDF1;
   --color-linear-primary: linear-gradient(to top right, #444BF7, #8084f9);
+  --color-linear-danger: linear-gradient(to top right, rgb(255, 92, 92), rgb(236, 4, 4));
   --color-primary: #444BF7;
   --color-secondary: #d4d4d4;
   --color-light: #f1f1f1;
@@ -1418,6 +1420,150 @@ header .container .content_cards .card .card_data .btns .btn:hover {
   font-size: 30px;
   color: var(--color-light);
   margin-bottom: 15px;
+}
+
+.quiz_query {
+  margin-bottom: 100px;
+}
+.quiz_query .container .app {
+  background: var(--color-linear-primary);
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  width: 90%;
+  max-width: 900px;
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .quiz_query .container .app {
+    padding: 10px;
+    width: 100%;
+  }
+}
+.quiz_query .container .app .quiz_num {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font-size: 20px;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  display: block;
+  color: var(--color-light);
+  background: var(--color-linear-primary);
+  display: grid;
+  transition: all 0.4s ease-in-out;
+  place-content: center;
+  border-radius: 100%;
+}
+.quiz_query .container .app h2 {
+  font-weight: 25px;
+  color: var(--color-light);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+.quiz_query .container .app .quiz {
+  padding: 10px 0;
+}
+.quiz_query .container .app .quiz .question {
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .quiz_query .container .app .quiz .question {
+    font-size: 15px;
+  }
+}
+.quiz_query .container .app .quiz h2 {
+  font-size: 18px;
+  color: var(--color-light);
+  margin-bottom: 15px;
+}
+.quiz_query .container .app .quiz .btn {
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: var(--color-secondary);
+  padding: 20px 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.quiz_query .container .app .quiz .btn:hover:not([disabled]) {
+  color: #ccc;
+}
+.quiz_query .container .app .quiz .btn:disabled {
+  cursor: no-drop;
+}
+.quiz_query .container .app .quiz .btn-next {
+  padding: 10px 20px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-light);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  background: var(--color-linear-primary);
+}
+.quiz_query .container .app .quiz .btn-next:hover {
+  background: var(--color-light);
+  border: 1px solid var(--color-primary);
+  color: var(--color-dark);
+}
+.quiz_query .container .app .quiz .answer-butttons {
+  margin-bottom: 15px;
+}
+.quiz_query .container .app .quiz .answer-butttons .correct {
+  background: var(--color-primary);
+  position: relative;
+  color: var(--color-light);
+}
+.quiz_query .container .app .quiz .answer-butttons .correct::after {
+  content: "👌";
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 0;
+}
+.quiz_query .container .app .quiz .answer-butttons .incorrect {
+  background: var(--color-linear-danger);
+  position: relative;
+  color: var(--color-light);
+}
+.quiz_query .container .app .quiz .answer-butttons .incorrect::after {
+  content: "😪";
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 0;
+}
+.quiz_query .container .app .quiz .result {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quiz_query .container .app .quiz .result p {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+@media (max-width: 576px) {
+  .quiz_query .container .app .quiz .result p {
+    font-size: 16px;
+  }
+}
+.quiz_query .container .app .quiz .result img {
+  width: 100px;
 }
 
 .testimonial {
