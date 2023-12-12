@@ -1456,6 +1456,13 @@ header .container .content_cards .card .card_data .btns .btn:hover {
   place-content: center;
   border-radius: 100%;
 }
+@media (max-width: 768px) {
+  .quiz_query .container .app .quiz_num {
+    right: 0px;
+    top: -30px;
+    border-radius: 5px;
+  }
+}
 .quiz_query .container .app h2 {
   font-weight: 25px;
   color: var(--color-light);
