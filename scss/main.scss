@@ -1535,6 +1535,14 @@ header {
                     padding: 15px 20px;
                     border-radius: 10px;
                     @include shadow();
+                    img {
+                        max-width: 300px;
+                        max-height: 300px;
+                        object-fit: cover;
+                        margin: 20px auto;
+                        display: block;
+                        border-radius: 10px;
+                    }
                     margin-bottom: 25px;
 
                     @media(max-width: 768px) {

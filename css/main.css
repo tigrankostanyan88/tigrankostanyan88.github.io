@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -1472,6 +1473,14 @@ header .container .content_cards .card .card_data .btns .btn:hover {
   border-radius: 10px;
   box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
   margin-bottom: 25px;
+}
+.quiz_query .container .app .quiz .question img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   .quiz_query .container .app .quiz .question {

@@ -103,18 +103,24 @@ function quiz() {
     resetState();
     const currentQuestion = questions[currentQuestionIndex];
     const questionNo = currentQuestionIndex + 1;
+    const img = document.createElement('img');
+
+    
+
     questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
+    
+    // img.src = currentQuestion.img;
+    currentQuestion.img === '' 
+    ? img.src = 'https://st4.depositphotos.com/17828278/24719/v/450/depositphotos_247193458-stock-illustration-image-vector-symbol-missing-available.jpg' 
+    : img.src = currentQuestion.img;
 
+    questionElement.appendChild(img);
 
-    currentQuestion.answers.forEach(({
-      text,
-      correct
-    }) => {
+    currentQuestion.answers.forEach(({ text, correct }) => {
       const button = document.createElement('button');
       button.innerHTML = text;
       button.classList.add('btn');
       answerButtons.appendChild(button);
-
       correct ? button.dataset.correct = correct : null;
       button.addEventListener('click', selectAnswer)
     })
