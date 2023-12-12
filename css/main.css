@@ -1425,16 +1425,100 @@ header .container .content_cards .card .card_data .btns .btn:hover {
 
 .quiz_query {
   margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.quiz_query .animation_decors .decor {
+  position: absolute;
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  border-radius: 100%;
+  display: block;
+  background: var(--color-linear-primary);
+}
+.quiz_query .animation_decors .decor:nth-of-type(1) {
+  width: 100px;
+  height: 100px;
+  left: 100px;
+  top: 50px;
+  animation: identifier 4.5s infinite;
+}
+.quiz_query .animation_decors .decor:nth-of-type(2) {
+  width: 70px;
+  height: 70px;
+  bottom: 100px;
+  left: 100px;
+  animation: identifier 4s infinite;
+}
+.quiz_query .animation_decors .decor:nth-of-type(3) {
+  width: 70px;
+  height: 70px;
+  top: 30px;
+  right: 15px;
+  animation: identifier 5s infinite;
+}
+.quiz_query .animation_decors .decor:nth-of-type(4) {
+  width: 50px;
+  height: 50px;
+  top: 300px;
+  right: 200px;
+  animation: identifier 3s infinite;
+}
+.quiz_query .animation_decors .decor:nth-of-type(5) {
+  width: 20px;
+  height: 20px;
+  bottom: 150px;
+  right: 100px;
+  animation: identifier 2s infinite;
+}
+.quiz_query .animation_decors .decor:nth-of-type(6) {
+  width: 25px;
+  height: 25px;
+  bottom: 350px;
+  left: 20px;
+  animation: identifier 2.4s infinite;
+}
+@keyframes identifier {
+  0% {
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.01);
+  }
 }
 .quiz_query .container .app {
   background: var(--color-linear-primary);
-  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  box-shadow: 0px 20px 25px 10px rgba(68, 74, 247, 0.431372549);
   width: 90%;
-  max-width: 900px;
-  margin: 100px auto 0;
+  max-width: 1200px;
+  margin: 20px auto;
   border-radius: 20px;
   padding: 30px;
   position: relative;
+}
+.quiz_query .container .app::after, .quiz_query .container .app::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  background: var(--color-linear-primary);
+}
+.quiz_query .container .app::after {
+  top: 10%;
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  left: -200px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(86deg, rgb(2, 0, 36) 0%, var(--color-primary) 0%, rgb(0, 212, 255) 100%);
+}
+.quiz_query .container .app::before {
+  top: 10%;
+  right: -200px;
+  box-shadow: 0px 10px 14px rgba(68, 74, 247, 0.337254902);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(-86deg, rgb(2, 0, 36) 0%, var(--color-primary) 0%, rgb(0, 212, 255) 100%);
 }
 @media (max-width: 768px) {
   .quiz_query .container .app {
@@ -1444,9 +1528,9 @@ header .container .content_cards .card .card_data .btns .btn:hover {
 }
 .quiz_query .container .app .quiz_num {
   position: absolute;
-  right: -20px;
-  top: -20px;
-  font-size: 20px;
+  right: 50px;
+  top: 40px;
+  font-size: 23px;
   box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
   display: block;
   color: var(--color-light);
@@ -1463,14 +1547,20 @@ header .container .content_cards .card .card_data .btns .btn:hover {
     border-radius: 5px;
   }
 }
-.quiz_query .container .app h2 {
+.quiz_query .container .app .title {
   font-weight: 25px;
   color: var(--color-light);
-  padding: 10px;
-  border-radius: 10px;
+  padding: 20px 30px;
+  border-radius: 50px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 30px;
+  box-shadow: 3px 5px 10px 5px rgba(17, 17, 17, 0.0666666667);
+  background: var(--color-linear-primary);
+}
+@media (max-width: 768px) {
+  .quiz_query .container .app .title {
+    font-weight: 19px;
+    padding: 15px;
+  }
 }
 .quiz_query .container .app .quiz {
   padding: 10px 0;
@@ -1717,7 +1807,6 @@ footer .container {
 footer .container .col {
   justify-content: center;
   display: flex;
-  outline: 1px solid blue;
   padding: 15px;
 }
 footer .container .col .logo {
