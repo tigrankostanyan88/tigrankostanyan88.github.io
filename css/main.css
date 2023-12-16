@@ -1843,3 +1843,53 @@ footer .container .col .subScribe .social a {
 footer .container .col .subScribe .descr {
   color: var(--color-secondary);
 }
+
+.tests_section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.tests_section .container .cards_block {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .tests_section .container .cards_block {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media (max-width: 768px) {
+  .tests_section .container .cards_block {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 576px) {
+  .tests_section .container .cards_block {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 380px) {
+  .tests_section .container .cards_block {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.tests_section .container .cards_block .card {
+  background: var(--color-linear-primary);
+  border-radius: 10px;
+  min-height: 100px;
+  display: grid;
+  place-content: center;
+}
+.tests_section .container .cards_block .card:hover {
+  cursor: pointer;
+}
+.tests_section .container .cards_block .card .title {
+  color: var(--color-light);
+  font-size: 23px;
+}
+@media (max-width: 380px) {
+  .tests_section .container .cards_block .card {
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}

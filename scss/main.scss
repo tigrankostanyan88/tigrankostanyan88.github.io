@@ -1923,3 +1923,46 @@ footer {
         }
     }
 }
+
+.tests_section {
+    margin-top  : 100px;
+    margin-bottom: 100px;
+    .container {
+        .cards_block { 
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 20px;
+            @media(max-width: 992px) {
+                grid-template-columns: repeat(4, auto);
+            }
+            @media(max-width: 768px) {
+                grid-template-columns: repeat(3, auto);
+            }
+            @media(max-width: 576px) {
+                grid-template-columns: repeat(2, auto);
+            }
+            @media(max-width: 380px) {
+                grid-template-columns: repeat(1, auto);
+            }
+            .card {
+                background: var(--color-linear-primary);
+                border-radius: 10px;
+                min-height: 100px;
+                display: grid;
+                place-content: center;
+                &:hover {
+                    cursor: pointer;
+                }
+                .title {
+                    color: var(--color-light);
+                    font-size: 23px;
+                }
+                @media(max-width: 380px) {
+                    min-width: 200px;
+                    margin: 0 auto;
+                }
+            }   
+        }
+        
+    }
+}
