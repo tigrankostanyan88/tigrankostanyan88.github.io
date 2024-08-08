@@ -1,0 +1,42 @@
+[
+    {
+        "id": 89, 
+        "name": "Chocolate Chip Cookies",
+        "quantity": 12,
+        "text": "Classic chocolate chip cookies with a perfect balance of soft and chewy.",
+        "price": 9.99,
+        "picture": "https://img.taste.com.au/puSNvmqQ/taste/2010/01/chocolate-chip-cookies-cropped-199866-1.jpg"
+    },
+    {
+        "id": 54, 
+        "name": "Red Velvet Cupcakes",
+        "quantity": 6,
+        "text": "Deliciously moist red velvet cupcakes with cream cheese frosting.",
+        "price": 12.99,
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8rKFYCm67WhgJOoerMr37w1JjqydlusJZoA&s"
+    },
+    {
+        "id": 34, 
+        "name": "Lemon Bars",
+        "quantity": 9,
+        "text": "Tangy lemon bars with a buttery shortbread crust and powdered sugar topping.",
+        "price": 8.49,
+        "picture": "https://www.recipetineats.com/uploads/2016/04/Lemon-Bars_2.jpg"
+    },
+    {
+        "id": 64, 
+        "name": "Brownie Bites",
+        "quantity": 15,
+        "text": "Rich and fudgy brownie bites, perfect for a sweet snack.",
+        "price": 10.99,
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwhc6YjRy7CJABVowVM-ORsbWj6eUqZxhZNQ&s"
+    },
+    {
+        "id": 12, 
+        "name": "Cupcake Sprinkles",
+        "quantity": 20,
+        "text": "Colorful sprinkles to add a festive touch to your cupcakes.",
+        "price": 4.99,
+        "picture": "https://www.purelykaylie.com/wp-content/uploads/2021/03/three-vegan-funfetti-cupcakes-with-vanilla-frosting.jpg"
+    }
+]
