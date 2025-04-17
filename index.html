@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title-->
+    <title>Ավտոդպրոց Արթիկում - Վարորդական Դասընթացներ, Թեստեր և Հրահանգիչներ</title>
+
+    <!-- Meta Description  -->
+    <meta name="description" content="Լավագույն ավտոդպրոցը Երևանում: Վարորդական դասընթացներ սկսնակների համար, որակյալ ուսուցում, A և B կարգերի վարորդական իրավունք ստանալու հնարավորություն։">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="ավտոդպրոց, վարորդական դասընթացներ, վարորդական իրավունք, ավտոդպրոց Երևան, վարորդական թեստեր, մեքենա վարել սովորել">
+
+    <!-- Author -->
+    <meta name="author" content="Ավտոդպրոց Արթիկ">
+
+    <!-- Open Graph (Facebook, WhatsApp ) -->
+    <meta property="og:title" content="Ավտոդպրոց Արթիկում - Վարորդական Դասընթացներ">
+    <meta property="og:description" content="Սովորեք վարել մեքենա մեր ավտոդպրոցում: Որակյալ վարորդական դասընթացներ, փորձառու հրահանգիչներ, տեսական և գործնական ուսուցում։">
+    <meta property="og:image" content="https://yourwebsite.com/images/avtodprots.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (Twitter-ի համար) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ավտոդպրոց Արթիկում - Վարորդական Դասընթացներ">
+    <meta name="twitter:description" content="Սկսեք ձեր վարորդական դասընթացները մեր փորձառու հրահանգիչների հետ:">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/avtodprots.jpg">
+
+    <!-- Canonical (URL) -->
+    <link rel="canonical" href="https://mg-drive.com">
+    <!-- Page icon -->
+    <link rel="icon" href="/images/page_icon.png">
+    <!-- Options -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- lenis -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- lightgallery -->
+    <link rel="stylesheet" href="./components/lightgallery/lightgallery-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./scss/main.css">
+</head>
+
+<body>
+    <!-- Main nav menu -->
+    <nav id="nav">
+        <div class="nav_progress"></div>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="navbar">
+                <li>
+                    <a href="#" class="active nav_link">Գլխավոր</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_link">Մեր Մասին</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_link">Դասընթացներ</a>
+                </li>
+                <li>
+                    <a href="./groups.html" class="nav_link">Խմբեր</a>
+                </li>
+                <li>
+                    <a href="./tests.html" target="_blank" class="nav_link">Թեստեր</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_link">Կարծիքներ</a>
+                </li>
+                <li class="close_menu">
+                    <button class="close_menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="social_media">
+                <!-- facebook -->
+                <a href="https://facebook.com/yourpage" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <!-- instagram -->
+                <a href="https://instagram.com/yourpage" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://instagram.com/yourpage" target="_blank">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </a>
+                <button class="menu open_menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Header content -->
+    <header>
+        <div class="container">
+            <div class="col">
+                <div class="header_content">
+                    <a href="https://maps.app.goo.gl/A3Xcm9wKVqvLRagU9" target="_blank" class="place">🏡Ք. Արթիկ,
+                        Ազատության 1/6</a>
+                    <h1><span>MG</span> Drive Schools</h1>
+                    <p class="text scroll_animate">Սովորիր վարել վստահ ու ապահով՝ փորձառու հրահանգիչների հետ: Մեր դասերը հարմարեցված են
+                        թե՛ սկսնակների, թե՛ փորձառու վարորդների համար։ Միացի՛ր մեզ ու ստացիր վարորդական իրավունք առանց
+                        ավելորդ սթրեսի!</p>
+
+                    <a href="#about" class="btn">Ավելի մեր մասին</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="register_form">
+                    <h2 class="title">Գրանցվել</h2>
+                    <form class="">
+                        <div class="input_field">
+                            <span class="">Անուն *</span>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="input_field">
+                            <span class="">Ազգնուն *</span>
+                            <input type="text" name="lastName" required>
+                        </div>
+                        <div class="input_field">
+                            <span class="">Էլ. հասցե *</span>
+                            <input type="text" name="email" required>
+                        </div>
+                        <div class="input_field">
+                            <span class="">Հեռախոսահամար *</span>
+                            <input type="tel" name="phone" required>
+                        </div>
+
+                        <div class="type">
+                            <label>
+                                <input type="radio" name="type" id="car" value="car" class="register_type">Տեսական
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="motorcycle" class="register_type"
+                                    value="practic">Գործնական
+                            </label>
+                        </div>
+
+                        <button type="submit">Գրանցվել</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <svg class="end_line" viewBox="0 0 1440 320">
+            <path fill="#F8F9FA" fill-opacity="1"
+                d="M0,64L48,96C96,128,192,192,288,229.3C384,267,480,277,576,266.7C672,256,768,224,864,197.3C960,171,1056,149,1152,160C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </header>
+    <!-- Main sections -->
+    <main>
+        <!-- Back to Top button -->
+        <div class="go_to_top">
+            <button id="backToTop">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="progress" id="progress"></span>
+            </button>
+        </div>
+        <!-- about me -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="col">
+                    <div class="image_box">
+                        <img class="large scroll_animate" src="./images/about/large.jpg" alt="">
+                        <img class="small scroll_animate" src="./images/about/small.jpg" alt="">
+                        <img class="traingl scroll_animate" src="./images/about/traingl.png" alt="">
+                        <img class="pattern scroll_animate" src="./images/about/pattern.png" alt="">
+                        <div class="experience scroll_animate">
+                            <h3 class="number">10+</h3>
+                            <p class="text">Տարվա փորձ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="content_box">
+                        <h2 class="title scroll_animate">Մեր մասին</h2>
+                        <h3 class="section_title">Ավտոդպրոց, որը պատրաստում է վստահ վարորդներ</h3>
+                        <p class="text"><b>MG Drive</b>-ը մասնագիտացված ուսումնական կենտրոն է, որտեղ դու կարող ես ձեռք
+                            բերել վարելու հմտություններ՝ վստահությամբ ու պրոֆեսիոնալ մոտեցմամբ։</p>
+                        <ul class="list">
+                            <li class="scroll_animate">
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Փորձ, որից սովորում են բոլոր սերունդները
+                            </li>
+                            <li class="scroll_animate">
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Տեսական և գործնական դասեր՝ ժամանակակից մեթոդներով
+                            </li>
+                            <li class="scroll_animate">
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Անվտանգության ու կանոնների խորը ուսուցում
+                            </li>
+                            <li class="scroll_animate">
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Ավտոդպրոց՝ հիմնված գիտելիքի ու փորձի վրա
+                            </li>
+                        </ul>
+                        <p class="text scroll_animate">
+                            Մեր նպատակն է քեզ պատրաստել ոչ միայն վարորդական իրավունքի ստացման համար, այլև ապահով ու
+                            վստահ վարելու համար։ Անկախ նրանից՝ սկսնակ ես, թե ուզում ես կատարելագործել քո հմտությունները,
+                            մենք այստեղ ենք օգնելու քեզ 🚘
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- why choose us -->
+        <section class="why_choose_us">
+            <div class="container">
+                <h2 class="section_title">Ինչու ընտրել MG Drive-ը</h2>
+                <div class="card_list">
+                    <div class="card scroll_animate active">
+                        <div class="card_body">
+                            <h3 class="title">
+                                <span class="text">Փորձառու ուսուցիչներ</span>
+                                <span class="icon">
+                                    <i class="fas fa-stamp"></i>
+                                </span>
+                            </h3>
+                            <p class="text">Մեր բոլոր հրահանգիչները լիցենզավորված են, մտավոր և ֆիզիկապես պատրաստված:</p>
+                        </div>
+                    </div>
+                    <div class="card scroll_animate">
+                        <div class="card_body">
+                            <h3 class="title">
+                                <span class="text">Լավագույն Գին՝ Բարձր Որակ</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-money-check"></i>
+                                </span>
+                            </h3>
+                            <p class="text">Մեր կառուցվածքային ուսուցումը ապահովում է որակյալ կրթություն՝ ձեր ներդրած
+                                գումարի իրական արժեքով։</p>
+                        </div>
+                    </div>
+                    <div class="card scroll_animate">
+                        <div class="card_body">
+                            <h3 class="title">
+                                <span class="text">Ուսուցում հաշմանդամների համար</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </span>
+                            </h3>
+                            <p class="text">Փորձառու հրահանգիչներ և հատուկ հարմարեցված մեքենաներ։</p>
+                        </div>
+                    </div>
+                    <div class="card scroll_animate">
+                        <div class="card_body">
+                            <h3 class="title">
+                                <span class="text">Անվտանգություն</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </span>
+                            </h3>
+                            <p class="text">Մեր նպատակը ոչ միայն վարելու տեխնիկան սովորեցնելն է, այլև ձեր վստահությունն
+                                ու հմտությունները զարգացնելը, որպեսզի ճանապարհին լինեք անվտանգ։</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- are you ready -->
+        <section class="are_you_ready">
+            <div class="container">
+                <div class="col">
+                    <div class="image">
+                        <img class="scroll_animate" src="./images/are_you_ready.png" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="content_box">
+                        <h2 class="section_title">Պատրա՞ստ ես սկսել</h2>
+                        <p class="text">
+                            <b>MG-Drive</b>-ը հասկանում է, որ ուսանողները հաճախ ունեն զբաղված գրաֆիկներ, ուստի մեր
+                            դասերն առաջարկում են առավելագույն ճկունություն: Ուսանողները կարող են ընտրել դասերի
+                            հաջորդականությունը և տեմպը՝ ըստ իրենց անհրաժեշտության:
+                        </p>
+                        <ul class="list scroll_animate">
+                            <li>
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Ճկուն հանդիպումներ շաբաթը վեց օր՝ համապատասխան ձեր գրաֆիկին:
+                            </li>
+                            <li>
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Պատրաստ ենք աջակցելու վարորդներին և տարեց ուսանողներին:
+                            </li>
+                            <li>
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Մեր ծառայությունները՝ բարձր որակով և հասանելի գներով, ապահովում են լավագույն ուսուցումը:
+                            </li>
+                            <li>
+                                <span class="icon circle-check"><i class="fa-solid fa-circle-check"></i></span>
+                                Սպասարկում ենք նաև ճանապարհային փորձարկումներ ուսումնական ավտոմեքենաներով:
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Questions -->
+        <section class="questions">
+            <div class="container">
+                <div class="col">
+                    <h2 class="section_title scroll_animate">Հաճախ Տրվող Հարցեր</h2>
+                    <p class="text scroll_animate">
+                        Ստորև կարող եք գտնել ամենահաճախ տրվող հարցերն ու պատասխանները մեր ավտոդպրոցի դասընթացների,
+                        գրանցման, և ընթացակարգերի վերաբերյալ։ Եթե չեք գտնում ձեզ հետաքրքրող հարցը, ազատ զգացեք <b><a
+                                href="#contact">կապ</a> </b>հաստատել մեզ հետ։
+                    </p>
+                </div>
+                <div class="col faq_content">
+                    <div class="faq scroll_animate">
+                        <div class="faq-question">
+                            <p>Քանի ամիս է տևում ավտոդպրոցի դասընթացը?</p>
+                            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">Միջինում 2-ից 3 ամիս՝ կախված խմբի ժամանակացույցից ուսանողի առաջընթացից։
+                        </div>
+                    </div>
+
+                    <div class="faq scroll_animate">
+                        <div class="faq-question">
+                            <p>Որ դասերին է հնարավոր գրանցվել առցանց?</p>
+                            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">Ե՛վ տեսական, և՛ գործնական դասերի համար հնարավոր է գրանցվել մեր կայքի
+                            միջոցով։</div>
+                    </div>
+
+                    <div class="faq scroll_animate">
+                        <div class="faq-question">
+                            <p>Ինչ փաստաթղթեր են անհրաժեշտ գրանցման համար?</p>
+                            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">Անձնագիր կամ ID քարտ, 1 լուսանկար (3x4), և բժշկական տեղեկանք։</div>
+                    </div>
+
+                    <div class="faq scroll_animate">
+                        <div class="faq-question">
+                            <p>Արդյոք հնարավոր է ընտրել մեքենայի տեսակը՝ ավտոմատ կամ մեխանիկ?</p>
+                            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">Այո՛, գրանցման ժամանակ դուք կարող եք նշել, թե որ մեքենայով եք ցանկանում
+                            անցնել։</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery -->
+        <section class="gallery">
+            <div class="container">
+                <h2 class="section_title">Մեր աշխատանքները</h2>
+                <div class="gallery_list" id="lightgallery">
+
+                    <a href="./images/gallery/1.jpg" class="gallery_item scroll_animate">
+                        <img src="./images/gallery/1.jpg" alt="">
+                    </a>
+                    <a href="./images/gallery/1.jpg" class="gallery_item scroll_animate">
+                        <img src="./images/gallery/1.jpg" alt="">
+                    </a>
+                    <a href="./images/gallery/1.jpg" class="gallery_item scroll_animate">
+                        <img src="./images/gallery/1.jpg" alt="">
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Our team -->
+        <section class="our_team">
+            <div class="container">
+                <h2 class="section_title">Մեր ուսուցիչները</h2>
+                <div class="team_list">
+                    <div class="team_card scroll_animate">
+                        <div class="image">
+                            <img src="https://img.freepik.com/free-photo/medium-shot-woman-sitting-chair_23-2149392849.jpg"
+                                alt="...">
+                        </div>
+                        <div class="content">
+                            <h3 class="name">Նազենի Հակոբյան</h3>
+                            <p class="profession">Դասընթացի վարող</p>
+                            <p class="text">12+ տարվա փորձով հրաշալի մասնագետ, ով կրթել է հարյուրավոր նոր վարորդների:
+                            </p>
+                            <div class="social_media">
+                                <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_card scroll_animate">
+                        <div class="image">
+                            <img src="https://img.freepik.com/free-photo/medium-shot-woman-posing-with-chair_23-2149392866.jpg"
+                                alt="...">
+                        </div>
+                        <div class="content">
+                            <h3 class="name">Նազենի Հակոբյան</h3>
+                            <p class="profession">Դասընթացի վարող</p>
+                            <p class="text">12+ տարվա փորձով հրաշալի մասնագետ, ով կրթել է հարյուրավոր նոր վարորդների:
+                            </p>
+                            <div class="social_media">
+                                <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_card scroll_animate">
+                        <div class="image">
+                            <img src="https://img.freepik.com/premium-photo/beautiful-elegant-sexy-woman-model-trendy-fashion-white-dress-posing-near-vintage-building-street-pretty-lady_338491-22351.jpg"
+                                alt="...">
+                        </div>
+                        <div class="content">
+                            <h3 class="name">Նազենի Հակոբյան</h3>
+                            <p class="profession">Դասընթացի վարող</p>
+                            <p class="text">12+ տարվա փորձով հրաշալի մասնագետ, ով կրթել է հարյուրավոր նոր վարորդների:
+                            </p>
+                            <div class="social_media">
+                                <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- user reviews -->
+        <section class="user_reviews">
+            <div class="container">
+                <h2 class="section_title scroll_animate">Մեր ուսանողների կարծիքները</h2>
+                <div class="container">
+                    <div class="review_list">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_item">
+                                        <div class="user_info">
+                                            <img src="https://img.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_171337-11412.jpg"
+                                                alt="User Image">
+                                            <h3 class="name">Մարիամ</h3>
+                                        </div>
+                                        <div class="user_review">
+                                            <b class="date">04/04/2025</b>
+                                            <div class="stars">
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <span>⭐</span>
+                                                <b>5.0</b>
+                                            </div>
+                                            <p class="text">Ես շատ գոհ եմ MG Drive-ից: Հրահանգիչները պրոֆեսիոնալ են, իսկ
+                                                դասերը՝
+                                                հետաքրքիր:</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Facebook Comments Plugin -->
+                <div class="fb-comments" data-href="https://yourwebsite.com/page-to-comment-on" data-width="100%" data-numposts="5"></div>
+                <div id="fb-root"></div>
+
+
+                    <button class="add_review">Թողնել կարծիք</button>
+                </div>
+            </div>
+        </section>
+        <!-- contact us  -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="content_box">
+                    <div class="col">
+                        <div class="image scroll_animate">
+                            <img src="./images/contact/image.jpeg" alt="Contact Us">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2 class="section_title">Կապ մեզ հետ</h2>
+                        <p class="text">Եթե ունեք հարցեր, առաջարկներ կամ պարզապես ուզում եք մեզ հետ կապվել, կարող եք
+                            լրացնել ստորև նշված ձևը:</p>
+                        <form class="contact_form">
+                            <div class="input_field">
+                                <span class="">Անուն *</span>
+                                <input type="text" name="firstName" required>
+                            </div>
+                            <div class="input_field">
+                                <span class="">Էլ. հասցե *</span>
+                                <input type="text" name="email" required>
+                            </div>
+                            <textarea name="message" placeholder="Հաղորդագրություն"></textarea>
+
+                            <button type="submit" class="submit">Ուղարկել</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="content_info">
+                    <div class="col scroll_animate location">
+                        <div class="logo">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h2 class="title">Հասցեն</h2>
+                        <p class="text">Ք.Արթիկ, Ազատության 1/6</p>
+                    </div>
+                    <div class="col scroll_animate address">
+                        <div class="logo">
+                            <a href="tel:094250251" target="_blank">
+                                <i class="fa-solid fa-address-book"></i>
+                            </a>
+                        </div>
+                        <h2 class="title">Կապ</h2>
+                        <p class="text"><a href="tel:094250251" target="_blank">(+374)-94-250-251</a></p>
+                    </div>
+                    <div class="col scroll_animate email">
+                        <div class="logo">
+                            <a href="mailto:artikautoschool@gmail.com" target="_blank">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                        <h2 class="title">Էլ․ հասցե</h2>
+                        <p class="text"><a href="mailto:artikautoschool@gmail.com"
+                                target="_blank">artikautoschool@gmail.com</a></p>
+                    </div>
+                    <div class="col scroll_animate map">
+                        <div class="logo">
+                            <a href="https://maps.app.goo.gl/4An2LnXcwRcjCCuv8" target="_blank">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </a>
+                        </div>
+                        <h2 class="title">Google Քարտեզ</h2>
+                        <p class="text"><a href="https://maps.app.goo.gl/4An2LnXcwRcjCCuv8" target="_blank">H21,
+                                Artik</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social_media">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <ul class="list_menu">
+                <li>
+                    <a href="">Գլխավոր</a>
+                </li>
+                <li>
+                    <a href="">Մեր Մասին</a>
+                </li>
+                <li>
+                    <a href="">Դասընթացներ</a>
+                </li>
+                <li>
+                    <a href="">Խմբեր</a>
+                </li>
+                <li>
+                    <a href="">Թեստեր</a>
+                </li>
+                <li>
+                    <a href="">Կարծիքներ</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                📍 Գտնվում ենք՝ Ք. Արթիկ, Ազատության 1/6 |
+                &copy; <span>Copyright</span>
+                <a href="#">MSpace</a>
+            </p>
+
+        </div>
+    </footer>
+
+<!-- Facebook SDK for JavaScript -->
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"  nonce="YOUR_NONCE"></script>
+
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="./components/lightgallery/lightgallery.min.js"></script>
+    <script src="./components/lightgallery/lightgallery.umd.js"></script>
+
+    <!-- Lenis js -->
+    <script src="./js/lenis.js"></script>
+    <!-- Main js -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

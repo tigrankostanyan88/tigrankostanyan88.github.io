@@ -1,0 +1,20 @@
+ <div class="contact_list">
+    <div class="col">
+        <a href="#" class="location">
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span> 
+            Ք.Արթիկ, Ազատության 1/6
+        </a>
+        <a href="#" class="email">
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>  
+            
+        </a>
+        <a href="#" class="phone">
+            <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>  
+            Հեռ․ 
+        </a>
+        
+    </div>
+    <div class="col">
+        
+    </div>
+</div>

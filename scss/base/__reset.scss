@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .4s ease-in-out;
+
+    &::after,
+    &::before {
+        transition: all .4s ease-in-out;
+    }
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: system-ui, Roboto, sans-serif;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-color);
+}
+
+body {
+    font-family: 'Noto Sans Armenian', system-ui;
+    background: var(--background-color);
+    font-weight: normal;
+}
+
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#backToTop {
+    position: fixed;
+    display: block;
+    bottom: -100px;
+    opacity: 1;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 23px;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    z-index: 2;
+
+    .progress {
+        display: inline-block;
+        background: var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        transition: all .2s ease-out;
+    }
+
+    &.active {
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        filter: drop-shadow(0 10px 20px var(--primary-color));
+    }
+
+    @media(max-width: 768px) {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        &.active {
+            bottom: 10px;
+            opacity: 1;
+        }
+    }
+}
+
+
+.fb-comments {
+    outline: 1px solid #ccc;
+    border-radius: 10px;
+}
