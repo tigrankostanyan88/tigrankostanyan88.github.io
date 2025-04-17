@@ -1,10 +1,14 @@
 let addReviews = document.querySelector('.add_review');
 
+
+
 addReviews.addEventListener('click', () => {
     Swal.fire({
         title: "Գրեք Ձեր կարծիքը",
         input: "textarea",
         inputLabel: "Ձեր կարծիքը այստեղ",
+        allowOutsideClick: () => !Swal.isLoading(),
+        scrollbarPadding: false,
         inputAttributes: {
           autocapitalize: "off"
         },
@@ -28,5 +32,6 @@ addReviews.addEventListener('click', () => {
           });
         }
       });
+      
       
 })
