@@ -26,23 +26,19 @@ class Questions {
         return `
             <div class="questionCard">
               <div class="image" id="lightgallery">
-                <a href="https://cdn.hiconsumption.com/wp-content/uploads/2020/09/Best-Drift-Cars-FB.jpg" class="gallery_item scroll_animate">
-                  <img src="https://cdn.hiconsumption.com/wp-content/uploads/2020/09/Best-Drift-Cars-FB.jpg" alt="..." loading="lazy">
+                <a href="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" data-src="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" class="gallery_item scroll_animate">
+                    <img src="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" alt="">
                 </a>
               </div>
               <div class="card_body">
                 <h3 class="title">${item.question}</h3>
-                <ul class="question_answers">
-                  ${answersHTML}
-                </ul>
+                <ul class="question_answers">${answersHTML}</ul>
               </div>
             </div>`;
     }
 
     renderQuestions() {
         this.tests.forEach((item, index) => {
-            console.log(this.container, 'pp');
-            
             this.container.innerHTML += this.renderQuestionCard(item, index);
         });
         

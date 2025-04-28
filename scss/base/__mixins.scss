@@ -4,6 +4,7 @@
         filter: drop-shadow(10px 0 10px rgb(55, 57, 74)) invert(100%);
     }
 }
+
 @mixin filterImage() {
     &:hover {
         transform: scale(1.08);
@@ -52,27 +53,31 @@
     }
 }
 
-@mixin shadow()  {
-    box-shadow: 0px 3px 15px 2px  #444df72b;
+@mixin shadow() {
+    box-shadow: 0px 3px 15px 2px #444df72b;
 }
+
 .input_field {
     @include inputField ();
 }
 
 @mixin scrollMask() {
     animation: moveElement;
-    animation-timeline: view(0% auto); animation-timeline: view(0% auto);
+    animation-timeline: view(0% 100%);
+
     @keyframes moveElement {
         0% {
-          opacity: 1;
+            opacity: 1;
         }
+
         50% {
-              opacity: 1;
+            opacity: 1;
         }
+
         100% {
-              opacity: 0;
+            opacity: 0;
         }
-    } 
+    }
 }
 
 @mixin dropShadow() {
@@ -82,47 +87,50 @@
 
 @mixin filterTextAnimate($active: true) {
     @if $active {
-      @supports (background-clip: text) or (-webkit-background-clip: text) {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
-        background-size: 200% 200%;
-        animation: textAnimate 4s ease infinite;
-      }
-  
-      span {
         @supports (background-clip: text) or (-webkit-background-clip: text) {
-          color: transparent;
-          background-clip: text;
-          -webkit-background-clip: text;
-          background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
-          background-size: 200% 200%;
-          animation: textAnimate 4s ease infinite;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
+            background-size: 200% 200%;
+            animation: textAnimate 4s ease infinite;
         }
-      }
-    } @else {
-      @supports (background-clip: text) or (-webkit-background-clip: text) {
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
-        background-size: 200% 200%;
-        animation: textAnimate .4s ease infinite;
-      }
+
+        span {
+            @supports (background-clip: text) or (-webkit-background-clip: text) {
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
+                background-size: 200% 200%;
+                animation: textAnimate 4s ease infinite;
+            }
+        }
     }
-  }
-  
-  // 🔄 Animation keyframes
-  @keyframes textAnimate {
+
+    @else {
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(135deg, #00bfff, #0077ff, #1e90ff);
+            background-size: 200% 200%;
+            animation: textAnimate .4s ease infinite;
+        }
+    }
+}
+
+// 🔄 Animation keyframes
+@keyframes textAnimate {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
-  
+}

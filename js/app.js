@@ -186,8 +186,8 @@ scrollAnimation();
 
 
 const backToTop = document.getElementById('backToTop');
-const progress = document.getElementById('progress'); // Ուղղված էր քո կոդում
-const navProgress = document.querySelector('.nav_progress'); // Ուղղված էր քո կոդում
+const progress = document.getElementById('progress'); 
+const navProgress = document.querySelector('.nav_progress');
 
 if(progress) {
     window.addEventListener('scroll', () => {
@@ -219,10 +219,12 @@ backToTop.addEventListener('click', () => {
 });
 });
 
-
-if(document.querySelector('#lightgallery')) {
-    lightGallery(document.getElementById('lightgallery'), {
-        licenseKey: 'your_license_key',
-        speed: 500,
-    });
-}
+let questions = document.querySelectorAll('#lightgallery');
+questions.forEach(question => {
+    if(question) {
+        lightGallery(question, {
+            licenseKey: 'your_license_key',
+            speed: 500,
+        });
+    }
+})

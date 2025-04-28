@@ -178,7 +178,9 @@ header {
                 }
             }
         }
+
     }
+    @include scrollMask();
 
     .end_line {
         position: absolute;
@@ -219,7 +221,5 @@ header {
                 }
             }
         }
-    }
-
-    @include scrollMask() 
+    } 
 }

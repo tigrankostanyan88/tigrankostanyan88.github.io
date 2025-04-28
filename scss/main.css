@@ -410,8 +410,7 @@ header {
   min-height: 100dvh;
   overflow: hidden;
   animation: moveElement;
-  animation-timeline: view(0% auto);
-  animation-timeline: view(0% auto);
+  animation-timeline: view(0% 100%);
 }
 header::after {
   content: "";
@@ -609,6 +608,17 @@ header .container .register_form {
     font-size: 40px;
   }
 }
+@keyframes moveElement {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header .end_line {
   position: absolute;
   bottom: -10px;
@@ -643,17 +653,6 @@ header .end_line {
   }
   header .container .header_content .place {
     margin: 15px auto;
-  }
-}
-@keyframes moveElement {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
