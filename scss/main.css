@@ -266,11 +266,11 @@ nav .container .social_media {
   display: flex;
   gap: 30px;
 }
-nav .container .social_media a {
+nav .container .social_media a, nav .container .social_media button {
   font-size: 23px;
   color: var(--primary-color);
 }
-nav .container .social_media a:hover {
+nav .container .social_media a:hover, nav .container .social_media button:hover {
   transform: translateY(-8px);
   filter: drop-shadow(10px 0 10px rgb(55, 57, 74)) invert(100%);
 }
@@ -286,7 +286,7 @@ nav .container .navbar {
   justify-content: space-between;
   min-width: -moz-max-content;
   min-width: max-content;
-  width: 60%;
+  width: 55%;
   gap: 20px;
   align-items: center;
 }
@@ -1386,10 +1386,170 @@ header .end_line {
     font-size: 18px;
   }
 }
+.question_page .container select {
+  max-width: 800px;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin: 30px auto;
+}
+.question_page .container select option {
+  border: none;
+  outline: none;
+}
+
+.account_page {
+  position: relative;
+}
+.account_page .cover {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.account_page .cover img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+.account_page .container {
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  position: relative;
+  top: 100px;
+  margin-bottom: 150px;
+  border-radius: 20px;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .account_page .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .account_page .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.account_page .container .col {
+  box-shadow: 0px 3px 15px 2px rgba(68, 77, 247, 0.168627451);
+  border-radius: 15px;
+  background: #fff;
+}
+.account_page .container .col .user_info {
+  padding: 5px;
+}
+.account_page .container .col .user_info .name {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.account_page .container .col .user_info .row .title {
+  margin-bottom: 15px;
+  color: #111;
+}
+.account_page .container .col .user_info .row .list_items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.8);
+  padding: 3px;
+}
+.account_page .container .col .user_info img {
+  height: 300px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.account_page .container .col .user_info .content_body {
+  padding: 15px;
+}
+.account_page .container .col:nth-of-type(3) {
+  padding: 30px;
+}
+.account_page .container .col:nth-of-type(3) .row {
+  margin-bottom: 30px;
+}
+.account_page .container .col:nth-of-type(3) .title {
+  margin-bottom: 15px;
+}
+.account_page .container .col:nth-of-type(3) ul li {
+  margin-bottom: 15px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.account_page .container .content_box {
+  padding: 30px;
+}
+.account_page .container .content_box .gender {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .account_page .container .content_box .gender {
+    flex-direction: column;
+  }
+}
+.account_page .container .content_box .gender label {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px 30px;
+  width: 100%;
+  position: relative;
+}
+.account_page .container .content_box .gender label input {
+  opacity: 0;
+  position: absolute;
+}
+.account_page .container .content_box .title {
+  margin-bottom: 30px;
+}
+.account_page .container .content_box form .input_field {
+  border: 1px solid #ddd;
+  position: relative;
+  margin-bottom: 35px;
+  z-index: 1;
+}
+.account_page .container .content_box form .input_field span, .account_page .container .content_box form .input_field input {
+  font-size: 16px;
+  color: var(--dark-text);
+}
+.account_page .container .content_box form button {
+  background-image: linear-gradient(to right, #444cf7 0%, #646cff 51%, #444cf7 100%);
+  box-shadow: 0px 3px 15px 2px rgba(68, 77, 247, 0.168627451);
+  padding: 12px 35px;
+  background-size: 200% auto;
+  color: var(--light-background);
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  width: -moz-max-content;
+  width: max-content;
+}
+.account_page .container .content_box form button:active {
+  transform: scale(0.95);
+}
+.account_page .container .content_box form button:hover {
+  background-position: right center;
+  color: var(--light-background);
+  text-decoration: none;
+}
 
 footer {
   background: #111;
   padding: 10px 0;
+  padding-bottom: 20px;
 }
 footer p, footer a {
   color: var(--text-color);

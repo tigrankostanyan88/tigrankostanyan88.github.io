@@ -27,7 +27,7 @@ nav {
             display: flex;
             gap: 30px;
 
-            a {
+            a, button {
                 font-size: 23px;
                 color: var(--primary-color);
                 @include filterShadow();
@@ -46,7 +46,7 @@ nav {
             display: flex;
             justify-content: space-between;
             min-width: max-content;
-            width: 60%;
+            width: 55%;
             gap: 20px;
             align-items: center;
             .close_menu {

@@ -26,7 +26,7 @@ class Questions {
         return `
             <div class="questionCard">
               <div class="image" id="lightgallery">
-                <a href="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" data-src="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" class="gallery_item scroll_animate">
+                <a href="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" class="gallery_item scroll_animate">
                     <img src="https://caradas.com/wp-content/uploads/2024/09/AdobeStock_224332680-scaled.jpeg" alt="">
                 </a>
               </div>

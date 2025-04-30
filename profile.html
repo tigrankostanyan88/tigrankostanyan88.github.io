@@ -53,7 +53,8 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
+        <div class="nav_progress"></div>
         <div class="container">
             <div class="logo">
                 <a href="/">
@@ -62,22 +63,22 @@
             </div>
             <ul class="navbar">
                 <li>
-                    <a href="./index.html" class="nav_link">Գլխավոր</a>
+                    <a href="#" class="nav_link">Գլխավոր</a>
                 </li>
                 <li>
                     <a href="#" class="nav_link">Մեր Մասին</a>
                 </li>
                 <li>
-                    <a href="#" class="nav_link">Դասընթացներ</a>
-                </li>
-                <li>
                     <a href="./groups.html" class="nav_link">Խմբեր</a>
                 </li>
                 <li>
-                    <a href="#" class="nav_link active">Թեստեր</a>
+                    <a href="./tests.html" target="_blank" class="nav_link">Թեստեր</a>
                 </li>
                 <li>
                     <a href="#" class="nav_link">Կարծիքներ</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav_link">Կապ</a>
                 </li>
                 <li class="close_menu">
                     <button class="close_menu">
@@ -94,9 +95,10 @@
                 <a href="https://instagram.com/yourpage" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://instagram.com/yourpage" target="_blank">
-                    <i class="fa-solid fa-phone-volume"></i>
-                </a>
+               
+                <button class="login">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
                 <button class="menu open_menu">
                     <i class="fa-solid fa-bars-staggered"></i>
                 </button>
@@ -111,31 +113,118 @@
                 <span class="progress" id="progress"></span>
             </button>
         </div>
-        <section class="question_page tests_page">
+        <section class="account_page">
+            <div class="cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiE8A_Cv_g-aVTdu2cF79H9qlmfzz8kfgayA&s" alt="">
+            </div>
             <div class="container">
-                <select name="" id="">
-                    <option value="">Ընտրել թեստը</option>
-                    <option value="">Թեստը 1</option>
-                    <option value="">Թեստը 2</option>
-                    <option value="">Թեստը 3</option>
-                    <option value="">Թեստը 4</option>
-                    <option value="">Թեստը 5</option>
-                    <option value="">Թեստը 6</option>
-                    <option value="">Թեստը 7</option>
-                    <option value="">Թեստը 8</option>
-                    <option value="">Թեստը 9</option>
-                    <option value="">Թեստը 10</option>
-                    <option value="">Թեստը 11</option>
-                    <option value="">Թեստը 12</option>
-                    <option value="">Թեստը 13</option>
-                    <option value="">Թեստը 14</option>
-                    <option value="">Թեստը 15</option>
-                    <option value="">Թեստը 16</option>
-                    <option value="">Թեստը 17</option>
-                    <option value="">Թեստը 18</option>
-                    <option value="">Թեստը 19</option>
-                    <option value="">Թեստը 20</option>
-                </select>
+                <!-- User info -->
+                <div class="col">
+                    <div class="user_info">
+                        <img src="https://as2.ftcdn.net/v2/jpg/08/57/81/97/1000_F_857819744_Ze41AcIA0qLVm05CVogb82ra67ILZvJg.jpg"
+                            alt="">
+                        <div class="content_body">
+                            <h3 class="name">Benjamin Hoppe</h3>
+                            <!-- row -->
+                            <div class="row">
+                                <h3 class="title">Հիմնական</h3>
+                                <ul class="list_items">
+                                    <li>
+                                        <b>Էլ․ հասցե</b>
+                                        <span>@mrbernjaminhoppe</span>
+                                    </li>
+                                    <li>
+                                        <b>Հեռ․</b>
+                                        <span>(+374)-526-22-22</span>
+                                    </li>
+                                    <li>
+                                        <b>Խումբ</b>
+                                        <span>#43</span>
+                                    </li>
+                                    <li>
+                                        <b>Հասցեն</b>
+                                        <span>
+                                            <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <b>Գրանցում</b>
+                                        <span>Apri 02.05.2025</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content bocy -->
+                <div class="col">
+                    <div class="content_box">
+                        <h3 class="title">Անձնական տվյալներ</h3>
+                        <form class="contact_form">
+                            <!-- Name -->
+                            <div class="input_field">
+                                <span class="">Անուն *</span>
+                                <input type="text" name="firstName" value="Benjamin" required>
+                            </div>
+                            <!-- email -->
+                            <div class="input_field">
+                                <span class="">Էլ. հասցե *</span>
+                                <input type="text" name="email" value="@mrbernjaminhopp" required>
+                            </div>
+                            <div class="input_field">
+                                <span class="">Հեռ *</span>
+                                <input type="text" name="phone" value="+374 (93) 49-24-14" required>
+                            </div>
+                            <!-- Birthday -->
+                            <div class="input_field">
+                                <input type="date" required>
+                            </div>
+                            <div class="gender">
+                                <label>
+                                    <input type="radio" checked class="gender" name="gender" value="male">Արական
+                                </label>
+                                <label>
+                                    <input type="radio" class="gender" name="gender" value="female">Իգական
+                                </label bel>
+                            </div>
+                       
+                            <button type="submit" class="submit">Պահպանել</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Nav -->
+                <div class="col">
+                    <div class="row">
+                        <h3 class="title">Հիմնական</h3>
+                        <ul class="">
+                            <li>
+                                <a class="nav-link active" href="/user/profile">
+                                    <i class="fas fa-id-card nav-icon"></i> Անձնական տվյալներ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/user/security">
+                                    <i class="fas fa-shield-alt nav-icon"></i> Անվտանգություն
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/user/notify">
+                                    <i class="fas fa-bell nav-icon"></i> Ծանուցումներ
+                                </a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="title">Ուսում</h3>
+                        <ul>
+                            <li>
+                                <a class="nav-link " href="/user/trainings">
+                                    <i class="fas fa-graduation-cap nav-icon"></i> Թրեյնինգներ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -196,7 +285,7 @@
     <script src="./components/lightgallery/lightgallery.min.js"></script>
     <script src="./components/lightgallery/lightgallery.umd.js"></script>
 
-    
+
     <script src="./js/data.js"></script>
     <!-- Lenis js -->
     <script src="./js/lenis.js"></script>

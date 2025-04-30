@@ -58,6 +58,7 @@ function inputField() {
     inputField.forEach(element => {
         const input = element.querySelector('input');
         const span = element.querySelector('span');
+        handleInputChange(input, span)
 
         // Add an event listener for user input
         input.addEventListener('input', () => handleInputChange(input, span));
@@ -65,7 +66,7 @@ function inputField() {
 
     function handleInputChange(input, span) {
         const hasValue = input.value.trim() !== '';
-        hasValue ? span.classList.add('active') : span.classList.remove('active')
+        if(input !== null && span !== null) hasValue ? span.classList.add('active') : span.classList.remove('active')
     }
 }
 
@@ -228,3 +229,22 @@ questions.forEach(question => {
         });
     }
 })
+
+
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('gender')) {
+   
+        const input = e.target.closest('input');
+        document.querySelectorAll('label').forEach(el => el.style.border = '1px solid #ddd')
+        
+        e.target.closest('label').style.border = '1px solid #ccc';
+        setTimeout(() => {
+            if (input.checked) {
+                e.target.closest('label').style.border = '1px solid #444cf7';
+            } else {                
+                e.target.closest('label').style.border = '1px solid #ccc';
+            }
+        }, 10);
+    }
+});
