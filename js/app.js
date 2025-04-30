@@ -232,6 +232,7 @@ questions.forEach(question => {
 
 
 
+// account profile check gender fields
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('gender')) {
    

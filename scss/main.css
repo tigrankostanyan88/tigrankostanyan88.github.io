@@ -1428,40 +1428,30 @@ header .end_line {
   border-radius: 20px;
   gap: 20px;
 }
-@media (max-width: 992px) {
-  .account_page .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .account_page .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 .account_page .container .col {
   box-shadow: 0px 3px 15px 2px rgba(68, 77, 247, 0.168627451);
   border-radius: 15px;
   background: #fff;
 }
-.account_page .container .col .user_info {
+.account_page .container .user_info {
   padding: 5px;
 }
-.account_page .container .col .user_info .name {
+.account_page .container .user_info .name {
   margin-bottom: 30px;
   text-align: center;
 }
-.account_page .container .col .user_info .row .title {
+.account_page .container .user_info .row .title {
   margin-bottom: 15px;
   color: #111;
 }
-.account_page .container .col .user_info .row .list_items li {
+.account_page .container .user_info .row .list_items li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(204, 204, 204, 0.8);
   padding: 3px;
 }
-.account_page .container .col .user_info img {
+.account_page .container .user_info img {
   height: 300px;
   border-radius: 10px;
   display: block;
@@ -1469,38 +1459,23 @@ header .end_line {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.account_page .container .col .user_info .content_body {
+.account_page .container .user_info .content_body {
   padding: 15px;
 }
-.account_page .container .col:nth-of-type(3) {
+.account_page .container .content_body {
   padding: 30px;
 }
-.account_page .container .col:nth-of-type(3) .row {
-  margin-bottom: 30px;
-}
-.account_page .container .col:nth-of-type(3) .title {
-  margin-bottom: 15px;
-}
-.account_page .container .col:nth-of-type(3) ul li {
-  margin-bottom: 15px;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  cursor: pointer;
-}
-.account_page .container .content_box {
-  padding: 30px;
-}
-.account_page .container .content_box .gender {
+.account_page .container .content_body .gender {
   margin-bottom: 30px;
   display: flex;
   gap: 30px;
 }
 @media (max-width: 768px) {
-  .account_page .container .content_box .gender {
+  .account_page .container .content_body .gender {
     flex-direction: column;
   }
 }
-.account_page .container .content_box .gender label {
+.account_page .container .content_body .gender label {
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1508,24 +1483,24 @@ header .end_line {
   width: 100%;
   position: relative;
 }
-.account_page .container .content_box .gender label input {
+.account_page .container .content_body .gender label input {
   opacity: 0;
   position: absolute;
 }
-.account_page .container .content_box .title {
+.account_page .container .content_body .title {
   margin-bottom: 30px;
 }
-.account_page .container .content_box form .input_field {
+.account_page .container .content_body form .input_field {
   border: 1px solid #ddd;
   position: relative;
   margin-bottom: 35px;
   z-index: 1;
 }
-.account_page .container .content_box form .input_field span, .account_page .container .content_box form .input_field input {
+.account_page .container .content_body form .input_field span, .account_page .container .content_body form .input_field input {
   font-size: 16px;
   color: var(--dark-text);
 }
-.account_page .container .content_box form button {
+.account_page .container .content_body form button {
   background-image: linear-gradient(to right, #444cf7 0%, #646cff 51%, #444cf7 100%);
   box-shadow: 0px 3px 15px 2px rgba(68, 77, 247, 0.168627451);
   padding: 12px 35px;
@@ -1537,13 +1512,62 @@ header .end_line {
   width: -moz-max-content;
   width: max-content;
 }
-.account_page .container .content_box form button:active {
+.account_page .container .content_body form button:active {
   transform: scale(0.95);
 }
-.account_page .container .content_box form button:hover {
+.account_page .container .content_body form button:hover {
   background-position: right center;
   color: var(--light-background);
   text-decoration: none;
+}
+.account_page .container .nav {
+  padding: 30px;
+}
+.account_page .container .nav .row {
+  margin-bottom: 30px;
+}
+.account_page .container .nav .title {
+  margin-bottom: 15px;
+}
+.account_page .container .nav ul li {
+  margin-bottom: 25px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  color: var(--light-text);
+  position: relative;
+  cursor: pointer;
+}
+.account_page .container .nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  background: var(--primary-color);
+}
+.account_page .container .nav ul li:hover {
+  transform: scale(1.03);
+}
+.account_page .container .nav ul li:hover::after {
+  width: 100%;
+}
+.account_page .container .nav ul li.active::after {
+  width: 100%;
+}
+.account_page .container .nav ul li i {
+  color: var(--light-text);
+  margin-right: 10px;
+}
+@media (max-width: 992px) {
+  .account_page .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .account_page .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 footer {

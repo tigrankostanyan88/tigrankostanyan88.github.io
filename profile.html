@@ -114,90 +114,86 @@
             </button>
         </div>
         <section class="account_page">
+            <!-- profile image cover -->
             <div class="cover">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiE8A_Cv_g-aVTdu2cF79H9qlmfzz8kfgayA&s" alt="">
             </div>
             <div class="container">
                 <!-- User info -->
-                <div class="col">
-                    <div class="user_info">
-                        <img src="https://as2.ftcdn.net/v2/jpg/08/57/81/97/1000_F_857819744_Ze41AcIA0qLVm05CVogb82ra67ILZvJg.jpg"
-                            alt="">
-                        <div class="content_body">
-                            <h3 class="name">Benjamin Hoppe</h3>
-                            <!-- row -->
-                            <div class="row">
-                                <h3 class="title">Հիմնական</h3>
-                                <ul class="list_items">
-                                    <li>
-                                        <b>Էլ․ հասցե</b>
-                                        <span>@mrbernjaminhoppe</span>
-                                    </li>
-                                    <li>
-                                        <b>Հեռ․</b>
-                                        <span>(+374)-526-22-22</span>
-                                    </li>
-                                    <li>
-                                        <b>Խումբ</b>
-                                        <span>#43</span>
-                                    </li>
-                                    <li>
-                                        <b>Հասցեն</b>
-                                        <span>
-                                            <a href=""><i class="fa-solid fa-location-dot"></i></a>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <b>Գրանցում</b>
-                                        <span>Apri 02.05.2025</span>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="col user_info">
+                    <img src="https://as2.ftcdn.net/v2/jpg/08/57/81/97/1000_F_857819744_Ze41AcIA0qLVm05CVogb82ra67ILZvJg.jpg" alt="....">
+                    <div class="content_body">
+                        <h3 class="name">Benjamin Hoppe</h3>
+                        <!-- row -->
+                        <div class="row">
+                            <h3 class="title">Հիմնական</h3>
+                            <ul class="list_items">
+                                <li>
+                                    <b>Էլ․ հասցե</b>
+                                    <span>@mrbernjaminhoppe</span>
+                                </li>
+                                <li>
+                                    <b>Հեռ․</b>
+                                    <span>(+374)-526-22-22</span>
+                                </li>
+                                <li>
+                                    <b>Խումբ</b>
+                                    <span>#43</span>
+                                </li>
+                                <li>
+                                    <b>Հասցեն</b>
+                                    <span>
+                                        <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <b>Գրանցում</b>
+                                    <span>Apri 02.05.2025</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <!-- Content bocy -->
-                <div class="col">
-                    <div class="content_box">
-                        <h3 class="title">Անձնական տվյալներ</h3>
-                        <form class="contact_form">
-                            <!-- Name -->
-                            <div class="input_field">
-                                <span class="">Անուն *</span>
-                                <input type="text" name="firstName" value="Benjamin" required>
-                            </div>
-                            <!-- email -->
-                            <div class="input_field">
-                                <span class="">Էլ. հասցե *</span>
-                                <input type="text" name="email" value="@mrbernjaminhopp" required>
-                            </div>
-                            <div class="input_field">
-                                <span class="">Հեռ *</span>
-                                <input type="text" name="phone" value="+374 (93) 49-24-14" required>
-                            </div>
-                            <!-- Birthday -->
-                            <div class="input_field">
-                                <input type="date" required>
-                            </div>
-                            <div class="gender">
-                                <label>
-                                    <input type="radio" checked class="gender" name="gender" value="male">Արական
-                                </label>
-                                <label>
-                                    <input type="radio" class="gender" name="gender" value="female">Իգական
-                                </label bel>
-                            </div>
-                       
-                            <button type="submit" class="submit">Պահպանել</button>
-                        </form>
-                    </div>
+                <div class="col content_body">
+                    <h3 class="title">Անձնական տվյալներ</h3>
+                    <form class="contact_form">
+                        <!-- Name -->
+                        <div class="input_field">
+                            <span class="">Անուն *</span>
+                            <input type="text" name="firstName" value="Benjamin" required>
+                        </div>
+                        <!-- email -->
+                        <div class="input_field">
+                            <span class="">Էլ. հասցե *</span>
+                            <input type="text" name="email" value="@mrbernjaminhopp" required>
+                        </div>
+                        <div class="input_field">
+                            <span class="">Հեռ *</span>
+                            <input type="text" name="phone" value="+374 (93) 49-24-14" required>
+                        </div>
+                        <!-- Birthday -->
+                        <div class="input_field">
+                            <input type="date" required>
+                        </div>
+                        <div class="gender">
+                            <label>
+                                <input type="radio" checked class="gender" name="gender" value="male">Արական
+                            </label>
+                            <label>
+                                <input type="radio" class="gender" name="gender" value="female">Իգական
+                            </label bel>
+                        </div>
+                   
+                        <button type="submit" class="submit">Պահպանել</button>
+                    </form>
                 </div>
                 <!-- Nav -->
-                <div class="col">
+                <div class="col nav">
                     <div class="row">
                         <h3 class="title">Հիմնական</h3>
                         <ul class="">
-                            <li>
+                            <li class="active">
                                 <a class="nav-link active" href="/user/profile">
                                     <i class="fas fa-id-card nav-icon"></i> Անձնական տվյալներ
                                 </a>
