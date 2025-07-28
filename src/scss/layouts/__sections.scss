@@ -1,0 +1,437 @@
+.about {
+    overflow: hidden;
+    padding: 50px 0;
+    margin-bottom: 150px;
+
+    .images {
+        position: relative;
+        max-width: 600px;
+        width: 100%;
+        width: 600px;
+        height: 600px;
+
+        img {
+            border: 10px solid var(--color-white);
+            border-radius: 30px;
+            max-width: 500px;
+            height: 100%;
+            object-fit: cover;
+
+            &:first-child {
+                position: absolute;
+                top: -50px;
+                right: -10px;
+                max-width: 250px;
+                height: 300px;
+                z-index: 2;
+            }
+
+            &:last-child {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.8;
+            background-image: radial-gradient(ellipse farthest-corner at 10px 10px, #fff, var(--color-accent) 50%, #fff 50%);
+            background-size: 10px 10px;
+        }
+
+        &::after {
+            top: -50px;
+            left: -50px;
+        }
+
+        &::before {
+            bottom: 30px;
+            right: -50px;
+        }
+    }
+
+    .content {
+        h2 {
+            font-size: 50px;
+        }
+
+        h5 {
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .images {
+            max-width: 100%;
+
+            img {
+                border: 5px solid var(--color-white);
+
+                &:first-child {
+                    max-width: 180px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 576px) {
+        .images {
+            max-width: 100%;
+
+            img {
+                border: 5px solid var(--color-white);
+
+                &:first-child {
+                    max-width: 180px;
+                    height: 230px;
+                }
+            }
+        }
+    }
+}
+
+.body-section {
+    position: relative;
+    margin-bottom: 150px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        figure {
+            width: 100%;
+        }
+
+        .fig-wrapper {
+            height: max-content;
+        }
+
+        object {
+            width: 100%;
+            max-width: 350px;
+            display: block;
+            margin: auto;
+            &:hover {
+                filter: drop-shadow(32px 5px 10px #1111111c);
+            }
+
+        }
+
+        .massage-type {
+            width: 100%;
+            height: 150px;
+            outline: 1px solid var(--color-accent);
+            border-radius: 15px;
+            object-fit: contain;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.user_reviews {
+    .container {
+        .reviews-result {
+            .progress {
+                height: 5px;
+
+                .progress-bar {
+                    background: var(--color-accent);
+                    height: 5px;
+                }
+            }
+
+            .list-group {
+                --bs-list-group-item-padding-x: 0px;
+                --bs-list-group-border-width: none;
+            }
+        }
+
+        .reviews-list {
+            max-height: 1200px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 1px;
+                height: 1px;
+            }
+
+            .user-review-item {
+                .image {
+                    .no-image {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        position: relative;
+                        display: flex;
+
+                        justify-content: center;
+
+                        .circle {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin-top: 20px;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                top: 0;
+                                left: 0;
+                                background: inherit;
+                                opacity: 0.4;
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: 45px;
+                                height: 6px;
+                                border-radius: 50%;
+                                bottom: 15px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: #11111157;
+                                opacity: 0.4;
+                                z-index: 1;
+                                filter: blur(3px);
+                            }
+
+                        }
+                    }
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                .start {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        @media (max-width: 450px) {
+            .reviews_list {
+                .review_list_item {
+                    .head {
+                        flex-direction: column;
+                    }
+
+                    .start {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 150px;
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        border: none;
+        border-bottom: 1px solid var(--color-accent);
+    }
+
+    .name-field,
+    .email-field {
+        width: 100%;
+    }
+
+    select option {
+        color: var(--color-accent);
+    }
+
+    .select-massage-tpe {
+        label {
+            font-weight: bold;
+        }
+
+        option {
+            &:hover {
+                background: var(--color-accent);
+                color: red;
+                padding: 10px;
+            }
+        }
+    }
+
+    .input-field {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding: 50px 20px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.5;
+            background: linear-gradient(-45deg, #ffffff51 50%, #fff 100%);
+            bottom: -50px;
+            right: -50px;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+.questions {
+    margin-bottom: 150px;
+
+    .question-item {
+        button {
+            width: 100%;
+            text-align: start;
+            font-size: 19px;
+            font-weight: normal;
+        }
+
+        .accordion-header {
+            background: var(--color-accent);
+        }
+    }
+
+    @media(max-width: 576px) {
+        margin-bottom: 50px;
+    }
+
+}
+
+.consultation {
+    margin-bottom: 100px;
+    overflow: hidden;
+    .images {
+        position: relative;
+        .card-box {
+            border: 1px solid var(--color-accent);
+            background: #ffffffd0;
+            margin-top: -100px;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .blob {
+            position: absolute; 
+            z-index: -1;
+            top: -60px;
+            left: -50px;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+        }
+        .user-img {
+            max-width: 500px;
+            max-height: 500px;
+            height: 100%;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: auto;
+            img {
+                max-width: 350px;
+                width: 100%;
+                position: relative;
+                top: 15px;
+            }
+        }
+    }
+}
+
+.services {
+    .service-card {
+        padding: 30px;
+        border: 1px solid var(--color-accent);
+        border-radius: 20px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            background: linear-gradient(30deg, #fff 0%, var(--color-accent) 100%);
+            top: -50px;
+            right: -50px;
+            opacity: 0.9;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+                width: 180%;
+                height: 180%;
+                border-radius: 0;
+                right: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .icon,  h3 {
+                color: var(--color-white);
+            }
+            .icon {
+                transform: scale(1.4);
+            }
+        }
+        h3 {
+            font-size: 23px;
+            flex-wrap: wrap;
+        }
+        .icon {
+            font-size: 30px;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: var(--color-accent);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    margin: 0;
+    padding: 0;
+
+    &::after,
+    &::before {
+        transition: all .3s ease-in-out;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1600px;
+    padding: 20px;
+    @media(max-width: 576px) {
+        padding: 15px;
+    }
+}
+
+button {
+    width: max-content;
+}
+
+body {
+    background: var(--color-theme);
+}
