@@ -86,7 +86,7 @@
         <section class="busines-setup" id="get-started">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 mb-5 mb-md-0">
+                    <div class="col-lg-8 mb-5">
                         <div class="content">
                             <div class="title fw-bold">Set up a <span class="text-red fw-bold">100% Foreign-Owned
                                     Company</span> in Dubai </div>
@@ -108,39 +108,38 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-end">
-                        <form class="register-form">
+                    <div class="col-lg-4 mb-5 d-flex justify-content-end">
+                        <form class="register-form needs-validation" novalidate>
                             <!-- First Name -->
-                            <div class="mb-2">
-                                <input type="text" class="form-control" id="first-name" placeholder="First Name *" aria-describedby="first-name-error" required="">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="First Name *" required>
+                                <div class="invalid-feedback">The field is required.</div>
                             </div>
 
                             <!-- Last Name -->
-                            <div class="mb-2">
-                                <div id="last-name-error" class="form-text text-red">The field is required.</div>
-                                <input type="text" class="form-control" id="last-name" placeholder="Last Name *" aria-describedby="last-name-error" required="">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Last Name *" required>
+                                <div class="invalid-feedback">The field is required.</div>
                             </div>
 
-                            <!-- Email -->
-                            <div class="mb-2">
-                                <div id="email-error" class="form-text text-red">The field is required.</div>
-                                <input type="email" class="form-control" id="email" placeholder="Email *" aria-describedby="email-error" required="">
+                            <!-- Email address -->
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email *" required>
+                                <div class="invalid-feedback">The field is required.</div>
                             </div>
 
-                            <!-- Phone -->
-                            <div class="mb-4">
-                                <div id="tel" class="form-text text-red">The field is required.</div>
-                                <div class="iti iti--allow-dropdown iti--separate-dial-code"><div class="iti__flag-container"><div class="iti__selected-flag" role="combobox" aria-controls="iti-0__country-listbox" aria-owns="iti-0__country-listbox" aria-expanded="false" tabindex="0" title="United Arab Emirates (‫الإمارات العربية المتحدة‬‎): +971" aria-activedescendant="iti-0__item-ae"><div class="iti__flag iti__ae"></div><div class="iti__selected-dial-code">+971</div><div class="iti__arrow"></div></div></div><input type="tel" class="form-control phone" id="tel" placeholder="50 123 4567" aria-describedby="tel-error" required="" autocomplete="off" data-intl-tel-input-id="0" style="padding-left: 94px;"></div>
+                            <!-- Phone Number -->
+                            <div class="mb-3">
+                                <input type="tel" class="form-control phone" placeholder="50 123 4567" required>
+                                <div class="invalid-feedback">The field is required.</div>
                             </div>
 
                             <!-- Message -->
-                            <div class="mb-4">
-                                <h2 class="fs-6 text-red" id="msg-error">The field is required.</h2>
-                                <textarea name="msg" id="msg" placeholder="What type of business you are looking to set up? *" class="form-control" aria-describedby="msg-error" required=""></textarea>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" placeholder="What type of business you are looking to set up? *"  required></textarea>
+                                <div class="invalid-feedback">The field is required.</div>
                             </div>
 
-                            <!-- Consent Text -->
-                            <h2 class="fs-6 text-red">The field is required.</h2>
                             <small class="all-bg-white d-block mb-2" style="font-size: 9px;line-height: .9rem;">
                                 By submitting this form, you agree to the Terms and Privacy Policy of CREATIVE ZONE.
                                 I consent to CREATIVE ZONE collecting my name, email address and phone number and
@@ -149,10 +148,10 @@
                             </small>
 
                             <!-- Submit Button -->
-                            <input class="btn d-block btn-cz-blue w-100 mb-5" type="submit" value="Submit">
+                            <button class="btn d-block btn-cz-blue w-100 mb-5" type="submit">Submit</button>
 
                             <!-- General Error Message -->
-                            <div class="mb-4 border border-2 border-warning py-2 px-3">
+                            <div id="warning-msg" class="needs-validation mb-4 border border-2 border-warning py-2 px-3">
                                 <p class="mb-0">One or more fields have an error. Please check and try again.</p>
                             </div>
                         </form>

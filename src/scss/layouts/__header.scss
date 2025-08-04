@@ -14,7 +14,9 @@
 
 header {
    background: url('../images/header/image-bg.png') no-repeat center/cover;
-   min-height: 100dvh;
+   .container {
+      max-width: 1400px;
+   }
    .brand-logo {
       width: 300px;
       margin-bottom: 30px;
@@ -76,7 +78,7 @@ header {
    }
 
    .main-title {
-      font-size: 6vw;
+      font-size: 5.5vw;
       font-weight: bold;
    }
 

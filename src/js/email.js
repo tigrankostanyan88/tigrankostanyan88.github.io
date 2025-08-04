@@ -1,44 +1,49 @@
-emailjs.init("8ntdIvsu4ES-7uX-E"); 
+'use strict';
 
-const forms = document.querySelectorAll("#registerForm");
+emailjs.init("8ntdIvsu4ES-7uX-E");
+
+const forms = document.querySelectorAll("form");
 
 forms.forEach(form => {
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let hasEmptyField = false;
+
+    const formData = new FormData(e.target);
+    const templateParams = {};
     
-        const formData = new FormData(form);
-        const templateParams = {};
-    
-        console.log(formData)
-    
-        // Loop through all form fields and add to templateParams
-        formData.forEach((value, key) => {
-            templateParams[key] = value;
-        });
-    
-        emailjs.send("service_k0wl3af", "template_b10xo97", templateParams)
-            .then(() => {
-                alert("Email sent successfully. ✅");
-                form.reset();
-            }, (error) => {
-                alert("Email sending failed.❌: " + error.text);
-            });
-    });
+    for (let [key, value] of formData.entries()) {
+      if (!value.trim()) {
+        hasEmptyField = true;
+        break;
+      }
+      templateParams[key] = value;
+    }
+
+    if (hasEmptyField) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    console.log(formData)
+
+  });
 });
 
 
-(() => {
-    'use strict';
-    const forms = document.querySelectorAll('.needs-validation');
+// All input validation
+function validation() {
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
 
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+      form.classList.add('was-validated');
+    }, false);
+  });
+}
 
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();
+validation()

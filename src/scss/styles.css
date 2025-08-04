@@ -20,7 +20,7 @@ a {
 }
 
 .container {
-  padding: 15px !important;
+  padding: 30px !important;
 }
 
 button {
@@ -30,7 +30,6 @@ button {
 
 ul {
   padding: 0;
-  margin: 0;
 }
 ul li {
   list-style: none;
@@ -62,17 +61,26 @@ section {
   padding: 40px 0;
 }
 
-.iti {
+.iti--container {
+  background: #000;
+  max-width: 100%;
   max-width: 400px;
+}
+
+.iti {
   width: 100%;
   color: var(--color-dark);
+  font-size: 14px;
+}
+.iti .iti__country-name, .iti .iti__dial-code {
+  font-size: 14px;
 }
 .iti .iti__country-list {
   height: 300px;
   border: 1px solid var(--color-white);
   border-radius: 5px;
-  margin-top: 25px;
-  max-width: 390px;
+  max-width: 330px;
+  width: 100%;
 }
 
 .text-box {
@@ -184,7 +192,9 @@ body {
 
 header {
   background: url("../images/header/image-bg.png") no-repeat center/cover;
-  min-height: 100dvh;
+}
+header .container {
+  max-width: 1400px;
 }
 header .brand-logo {
   width: 300px;
@@ -249,7 +259,7 @@ header .eyebrow {
   margin-bottom: 20px;
 }
 header .main-title {
-  font-size: 6vw;
+  font-size: 5.5vw;
   font-weight: bold;
 }
 header .sub-title {
@@ -294,7 +304,7 @@ header .sub-title {
 .busines-setup .text {
   margin-bottom: 30px;
 }
-.busines-setup form {
+.busines-setup .register-form {
   margin-top: -250px;
   background: #fff;
   padding: 30px;
@@ -302,28 +312,34 @@ header .sub-title {
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-.busines-setup form .btn {
+.busines-setup .register-form #warning-msg {
+  display: none;
+}
+.busines-setup .register-form.was-validated #warning-msg {
+  display: block;
+}
+.busines-setup .register-form .btn {
   width: 100%;
   display: block;
   border-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.busines-setup form textarea {
+.busines-setup .register-form textarea {
   min-height: 100px;
   border: 1px solid #000;
 }
-.busines-setup form input {
+.busines-setup .register-form input {
   border: 1px solid #000;
   border-radius: 10px;
 }
-.busines-setup form small {
+.busines-setup .register-form small {
   font-size: 9px;
   display: inline-block;
   line-height: 0.9rem;
   margin-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .busines-setup {
     padding: 0;
   }
