@@ -1,5 +1,13 @@
 const inputphone = document.querySelectorAll(".phone");
 inputphone.forEach(input => {
+
+
+  input.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+  });
+
+
+
   window.intlTelInput(input, {
       separateDialCode: true,
       initialCountry: "ae",
@@ -14,6 +22,7 @@ inputphone.forEach(input => {
 //   });
 //   myModal.show();
 // });
+
 
 
 const features = [{
