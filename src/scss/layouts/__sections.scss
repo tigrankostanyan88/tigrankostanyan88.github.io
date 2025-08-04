@@ -62,12 +62,11 @@
 
 }
 
-
 @mixin icon() {
     &::after {
         content: '';
         position: absolute;
-        background: var(--color-orange);
+        background: var(--color-red);
         width: 10px;
         height: 10px;
         top: 5px;
@@ -152,6 +151,8 @@
     ul li {
         position: relative;
         margin-bottom: 10px;
+        font-size: 16px;
+        font-family: Raleway, sans-serif;
         @include icon();
     }
 

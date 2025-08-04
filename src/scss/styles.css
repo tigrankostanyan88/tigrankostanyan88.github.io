@@ -4,6 +4,8 @@
   transition: all 0.3s ease-in-out;
   margin: 0;
   padding: 0;
+  font-family: Raleway, sans-serif;
+  line-height: 1.6;
 }
 *::after, *::before {
   transition: all 0.3s ease-in-out;
@@ -18,7 +20,7 @@ a {
 }
 
 .container {
-  padding: 30px !important;
+  padding: 15px !important;
 }
 
 button {
@@ -37,6 +39,7 @@ ul li {
 body.modal-open {
   padding-right: 0 !important;
   overflow: hidden;
+  font-family: Raleway, sans-serif;
 }
 
 .text-accent {
@@ -100,7 +103,7 @@ body {
 
 :root {
   --color-accent: #0A1E41;
-  --color-gradient: linear-gradient(260deg,#151826 0%, rgba(31, 68, 239, 1) 100%);
+  --color-gradient: linear-gradient(260deg,#680a1b 0%, #C40A2D 100%);
   --color-primary: #00B8B0;
   --color-secondary: #F9F7F3;
   --color-text-dark: #2E2E2E;
@@ -179,9 +182,100 @@ body {
   color: #000;
 }
 
-header img {
-  width: 100%;
+header {
+  background: url("../images/header/image-bg.png") no-repeat center/cover;
+  min-height: 100dvh;
+}
+header .brand-logo {
+  width: 300px;
+  margin-bottom: 30px;
+}
+header .features-list {
+  padding: 15px;
+}
+header .features-list li::after {
+  content: "";
+  position: absolute;
+  background: var(--color-red);
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: -20px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+header .price-box {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+header .price-box::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 90%;
   height: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--color-red);
+  z-index: 1;
+}
+header .price-box .price-label {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 23px;
+}
+header .price-box .price-amount {
+  display: inline-block;
+  background: var(--color-gradient);
+  color: var(--color-white);
+  padding: 5px 40px;
+  height: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  z-index: 2;
+}
+header .eyebrow {
+  font-size: clamp(40px, 3vw, 40px);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+header .main-title {
+  font-size: 6vw;
+  font-weight: bold;
+}
+header .sub-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  header .brand-logo {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  header .price-box .price-label {
+    font-size: 16px;
+  }
+  header .price-box .price-amount {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header .price-box .price-label {
+    font-size: 12px;
+  }
+  header .price-box .price-amount {
+    font-size: 25px;
+  }
 }
 
 .busines-setup {
@@ -283,7 +377,7 @@ header img {
 .company-formation .brand-tick li::after {
   content: "";
   position: absolute;
-  background: var(--color-orange);
+  background: var(--color-red);
   width: 10px;
   height: 10px;
   top: 5px;
@@ -313,11 +407,13 @@ header img {
 .uae-business-benefits ul li {
   position: relative;
   margin-bottom: 10px;
+  font-size: 16px;
+  font-family: Raleway, sans-serif;
 }
 .uae-business-benefits ul li::after {
   content: "";
   position: absolute;
-  background: var(--color-orange);
+  background: var(--color-red);
   width: 10px;
   height: 10px;
   top: 5px;
@@ -548,4 +644,10 @@ header img {
 footer {
   background: #18233F;
   color: #fff;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 23px;
 }/*# sourceMappingURL=styles.css.map */
