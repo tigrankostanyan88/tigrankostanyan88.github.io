@@ -84,48 +84,59 @@
                     </div>
                     <div class="col-md-4 d-flex justify-content-end">
                         <form class="register-form">
-                            <!-- First name -->
+                            <!-- First Name -->
                             <div class="mb-2">
-                                <input type="email" class="form-control" id="name" placeholder="First Name"
-                                    aria-describedby="name">
-                            </div>
-                            <!-- Last name -->
-                            <div class="mb-2">
-                                <div id="last-name" class="form-text text-red">The field is required.</div>
-                                <input type="password" class="form-control" id="last-name" placeholder="First Name"
-                                    aria-describedby="last-name">
+                                <input type="text" class="form-control" id="first-name" placeholder="First Name *"
+                                    aria-describedby="first-name-error" required>
                             </div>
 
+                            <!-- Last Name -->
                             <div class="mb-2">
-                                <div id="first-name" class="form-text text-red">The field is required.</div>
-                                <input type="text" class="form-control" id="first-name" placeholder="First Name"
-                                    aria-describedby="first-name">
+                                <div id="last-name-error" class="form-text text-red">The field is required.</div>
+                                <input type="text" class="form-control" id="last-name" placeholder="Last Name *"
+                                    aria-describedby="last-name-error" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-2">
+                                <div id="email-error" class="form-text text-red">The field is required.</div>
+                                <input type="email" class="form-control" id="email" placeholder="Email *"
+                                    aria-describedby="email-error" required>
                             </div>
 
                             <!-- Phone -->
                             <div class="mb-4">
-                                <div id="tell" class="form-text text-red">The field is required.</div>
-                                <input type="tel" class="form-control phone" id="tel" placeholder="50 123 4567">
+                                <div id="tel" class="form-text text-red">The field is required.</div>
+                                <input type="tel" class="form-control phone" id="tel" placeholder="50 123 4567"
+                                    aria-describedby="tel-error" required>
                             </div>
 
                             <!-- Message -->
                             <div class="mb-4">
-                                <h2 class="fs-6 text-red">The field is required.</h2>
-                                <textarea name="msg" placeholder="What type of business you are looking to set up? *"
-                                    class="form-control"></textarea>
+                                <h2 class="fs-6 text-red" id="msg-error">The field is required.</h2>
+                                <textarea name="msg" id="msg"
+                                    placeholder="What type of business you are looking to set up? *"
+                                    class="form-control" aria-describedby="msg-error" required></textarea>
                             </div>
+
+                            <!-- Consent Text -->
                             <h2 class="fs-6 text-red">The field is required.</h2>
-                            <small class="all-bg-white"
-                                style="font-size: 9px;line-height: .9rem;margin-bottom: 10px;">By submitting this form,
-                                you agree to the Terms and Privacy Policy of CREATIVE ZONE. I consent to CREATIVE ZONE
-                                collecting my name, email address and phone number and contacting me either by the email
-                                address or phone number supplied.</small>
-                            <input class="btn d-block btn-cz-blue w100 mb-5" type="submit" value="Submit">
-                            <!-- Strong text -->
+                            <small class="all-bg-white d-block mb-2" style="font-size: 9px;line-height: .9rem;">
+                                By submitting this form, you agree to the Terms and Privacy Policy of CREATIVE ZONE.
+                                I consent to CREATIVE ZONE collecting my name, email address and phone number and
+                                contacting me
+                                either by the email address or phone number supplied.
+                            </small>
+
+                            <!-- Submit Button -->
+                            <input class="btn d-block btn-cz-blue w-100 mb-5" type="submit" value="Submit">
+
+                            <!-- General Error Message -->
                             <div class="mb-4 border border-2 border-warning py-2 px-3">
                                 <p class="mb-0">One or more fields have an error. Please check and try again.</p>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -417,7 +428,7 @@
                     <div class="swiper-wrapper" id="specialist-slides"></div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="#busines-setup" class="btn bg-accent text-white py-1 px-5">Contact us now</a>
+                    <a href="#busines-setup" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn bg-accent text-white py-1 px-5">Contact us now</a>
                 </div>
             </div>
         </section>
@@ -440,24 +451,28 @@
                     </div>
                     <div class="modal-body">
                         <div class="widgetModal-header mb-5">
-                            <img class="widgetModal-logo" src="https://app.brightcall.ai/images/saved/dafb387938eb9d1523a10c18e7a28c454.png" alt="logo">
+                            <img class="widgetModal-logo"
+                                src="https://app.brightcall.ai/images/saved/dafb387938eb9d1523a10c18e7a28c454.png"
+                                alt="logo">
                             <div class="widgetModal-headerInner">
                                 <div class="widgetModal-headerTitles">
-                                    <div class="widgetModal-title text-center mb-3 fw-bold fs-4">Looking to Setup a Business in the UAE?</div>
-                                    <div class="widgetModal-subTitle text-center mb-3 fw-bold fs-4"><span><b>Get a Call Back within 1 Minute</b></span></div>
+                                    <div class="widgetModal-title text-center mb-3 fw-bold fs-4">Looking to Setup a
+                                        Business in the UAE?</div>
+                                    <div class="widgetModal-subTitle text-center mb-3 fw-bold fs-4"><span><b>Get a Call
+                                                Back within 1 Minute</b></span></div>
                                 </div>
                             </div>
                         </div>
-                        <form class="register-form">
+                        <form action="" class="register-form">
                             <!-- First name -->
                             <div class="mb-2">
                                 <div class="form-text text-secondary">Full name (required).</div>
-                                <input type="email" class="form-control" rounded>
+                                <input type="text" class="form-control" required>
                             </div>
                             <!-- Email -->
                             <div class="mb-2">
                                 <div class="form-text text-secondary">Email (required).</div>
-                                <input type="email" class="form-control" rounded>
+                                <input type="email" class="form-control" required>
                             </div>
                             <!-- Phone -->
                             <div class="mb-2">
@@ -465,7 +480,7 @@
                                 <div class="d-flex gap-2">
                                     <input type="tel" id="phone" class="form-control phone" id="tel"
                                         placeholder="50 123 4567">
-                                    <button class="btn bg-red text-white submit">Call me</button>
+                                    <button type="submit" class="btn bg-red text-white submit">Call me</button>
                                 </div>
                             </div>
                         </form>
