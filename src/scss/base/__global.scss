@@ -1,0 +1,60 @@
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background: var(--color-accent);
+}
+
+.btn {
+  outline: 1px solid var(--color-accent);
+}
+.btn:hover {
+  color: #111 !important;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.iti {
+  max-width: 400px;
+  width: 100%;
+  color: var(--color-dark);
+
+  .iti__country-list {
+    height: 300px;
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+    margin-top: 25px;
+    max-width: 390px;
+  }
+}
+
+.text-box {
+  display: flex;
+  gap: 15px;
+
+  .icon {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    margin-top: 5px;
+    background: var(--color-accent);
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+}
+
+
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #1F44EF); /* Գույները */
+  -webkit-background-clip: text;   /* WebKit դիտարկիչների համար */
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background: #fff;
+  font-family: NT Somic, sans-serif;
+}

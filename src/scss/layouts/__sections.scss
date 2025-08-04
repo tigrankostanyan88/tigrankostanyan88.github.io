@@ -1,0 +1,405 @@
+.busines-setup {
+    position: relative;
+    background: var(--color-section);
+    padding: 30px 0;
+    z-index: 2;
+
+    .title {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #0d1d41;
+    }
+
+    .text {
+        margin-bottom: 30px;
+    }
+
+    form {
+        margin-top: -250px;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0px 0px 7px 2px #989898;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        .btn {
+            width: 100%;
+            display: block;
+            border-radius: 0;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        textarea {
+            min-height: 100px;
+            border: 1px solid #000;
+        }
+
+        input {
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+
+        small {
+            font-size: 9px;
+            display: inline-block;
+            line-height: .9rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        form {
+            margin-top: 0;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        padding: 0;
+    }
+
+}
+
+
+@mixin icon() {
+    &::after {
+        content: '';
+        position: absolute;
+        background: var(--color-orange);
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: -20px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+@mixin borderRadius($left: 10px, $right: 10px) {
+    border-bottom-left-radius: $left;
+    border-top-right-radius: $right;
+}
+
+.company-formation {
+    .cards {
+        display: grid;
+        align-content: space-around;
+        height: 100%;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        max-width: 400px;
+        text-align: end;
+        padding: 60px 40px;
+
+        h3 {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 1200px) {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-radius: 30px;
+        }
+
+        @media (max-width: 992px) {
+            margin: auto;
+        }
+
+        @media (max-width: 768px) {
+            border-radius: 0;
+            border-top-right-radius: 30%;
+            border-bottom-left-radius: 30%;
+        }
+    }
+
+    .usp {
+        max-width: 261px;
+        margin: auto;
+    }
+
+    .brand-tick {
+        li {
+            position: relative;
+            font-size: 16px;
+            @include icon();
+        }
+    }
+}
+
+.uae-business-benefits {
+    overflow: hidden;
+    background: var(--color-accent);
+
+    .container {
+        padding: 50px 0;
+    }
+
+    .buildings {
+        margin-top: -105px;
+
+        @media(max-width: 768px) {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            ;
+        }
+    }
+
+    ul li {
+        position: relative;
+        margin-bottom: 10px;
+        @include icon();
+    }
+
+}
+
+.busines-basic-steps {
+    background: var(--color-section);
+
+    .icon {
+        img {
+            width: 57px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .num {
+            width: 30px;
+            margin: auto;
+            margin-bottom: 10px;
+            @include borderRadius()
+        }
+
+        .icaption {
+            max-width: 200px;
+            text-align: center;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        position: relative;
+
+        &.active-line {
+            &::after {
+                position: absolute;
+                content: '';
+                width: 110%;
+                height: 1px;
+                background: var(--color-red);
+                top: 55%;
+                right: -63%;
+            }
+
+            @media(max-width: 992px) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.business-setup-services {
+    .card {
+        height: 100%;
+        max-width: 500px;
+        width: 100%;
+        padding: 50px 30px;
+        border-top-right-radius: 150px;
+        border-bottom-left-radius: 150px;
+        box-shadow: 0 0 60px 10px #1f45ef27;
+
+        h3 {
+            font-size: 45px;
+            display: grid;
+            place-content: center;
+            padding: 15px;
+        }
+
+        @media(max-width: 576px) {
+            max-width: 800px;
+            border-radius: 20px;
+            display: block;
+            padding: 15px;
+
+            h3 {
+                place-content: start;
+                font-size: 30px;
+            }
+        }
+    }
+
+    margin-bottom: 50px;
+}
+
+.our-values {
+    background: var(--color-section);
+    .container {
+        padding: 0;
+    }
+
+   
+    .card {
+        border: none;
+        background: transparent;
+        color: var(--color-white);
+        background: transparent;
+
+
+        border: none;
+        box-shadow: none;
+        .card-title {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .number {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Raleway, sans-serif;
+            ;
+        }
+    }
+}
+
+.our-specialists {
+    .card {
+        background: transparent;
+        max-width: 300px;
+        margin: auto;
+        border: none;
+
+        img {
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+    }
+
+    .btn {
+        display: block;
+        margin: auto;
+        max-width: 300px;
+        border-radius: 0;
+        @include borderRadius();
+
+    }
+}
+
+.call {
+    position: fixed;
+    bottom: -20px;
+    right: 100px;
+    z-index: 100;
+
+    input {
+        height: max-content;
+    }
+
+    .btn {
+        font-size: 30px;
+        border: none;
+        position: relative;
+        border: none;
+        outline: none;
+
+        &:hover {
+            background: #fff;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background: #0808089b;
+            z-index: -1;
+            animation: pulse 1s ease-in-out infinite;
+        }
+    }
+
+    .msg {
+        background: #fff;
+        color: #000;
+        padding: 15px;
+        border-radius: 15px;
+        position: absolute;
+        bottom: 30px;
+        right: 75px;
+        width: 300px;
+        border: 5px solid var(--color-red);
+        h3 {
+            font-weight: bold;
+            color: #000;
+        }
+        p {
+            font-weight: normal;
+            color: #666;
+        }
+        h3, p {
+            font-size: 13px;
+        }
+
+    }
+
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    bottom: 30px;
+    button {
+        height: max-content;
+    }
+    .msg {
+        padding: 15px;
+        position: static;
+        width: 100%;
+    }
+    @media(max-width: 768px) {
+    }
+}
+
+.modal-body {
+    min-height: 500px;
+    padding: 30px;
+    background: url('https://app.brightcall.ai/images/saved/ded5e494b255d397b03ecaf4c4710e9e0.jpeg') no-repeat center/cover;
+    img {
+        width: 200px;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    form {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: #333;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    background: #ffffff;
+  }
+}
