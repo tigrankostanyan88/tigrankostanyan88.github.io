@@ -18,9 +18,8 @@ section {
 }
 
 .iti--container {
-  background: #000;
   max-width: 100%;
-  max-width: 400px;
+  max-width: 300px;
 }
 .iti {
   width: 100%;
@@ -68,4 +67,39 @@ body {
 }
 
 
+.modal {
+  .modal-content {
+    padding: 30px;
+  }
 
+  .widgetModal-logo {
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .btn-close {
+    margin: 15px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .widgetModal-subTitle {
+    font-size: 12px;
+  }
+
+  .join-btn {
+    font-size: 12px;
+    color: var(--color-accent);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img {
+    height: 80px;
+    object-fit: contain;
+  }
+
+}

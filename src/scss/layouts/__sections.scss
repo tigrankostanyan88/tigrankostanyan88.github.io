@@ -382,23 +382,6 @@
     }
 }
 
-.modal-body {
-    min-height: 500px;
-    padding: 30px;
-    background: url('https://app.brightcall.ai/images/saved/ded5e494b255d397b03ecaf4c4710e9e0.jpeg') no-repeat center/cover;
-    img {
-        width: 200px;
-        display: block;
-        margin: auto;
-        margin-bottom: 30px;
-    }
-    form {
-        background: #fff;
-        padding: 15px;
-        border: 1px solid #ccc;
-    }
-}
-
 
 @keyframes pulse {
   0% {

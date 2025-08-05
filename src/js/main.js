@@ -15,13 +15,13 @@ inputphone.forEach(input => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {
-//     backdrop: 'static',
-//     keyboard: false
-//   });
-//   myModal.show();
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {
+    backdrop: 'static',
+    keyboard: false
+  });
+  myModal.show();
+});
 
 
 
@@ -77,43 +77,33 @@ const features = [{
         title: "Transparent Approach",
         text: "Our fees are transparent, without hidden costs. We explain each step and price to prevent surprises. We provide our best proposal and compare it fairly with other offers."
     }
-];
-
-const specialists = [
-  {
-    name: "Shehab Kadry",
+  ];
+  
+  const specialists = [
+    {
+      name: "Haley Belch",
+      role: "Business Setup Advisor",
+      img: "/src/images/specialists/haley.jpg"
+    },
+    {
+      name: " Fuqan Ali",
+      role: "Business Setup Advisor",
+      img: "/src/images/specialists/fuqan.jpg"
+    },
+    {
+      name: "Peter Xu",
+      role: "Business Setup Advisor",
+      img: "/src/images/specialists/peter.jpg"
+    },
+    {
+    name: "Sarah Latifa",
     role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/shehab.png"
+    img: "/src/images/specialists/sarah.jpg"
   },
   {
-    name: "Kiran Dodeja",
+    name: "James O Neil",
     role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/Kiran.png"
-  },
-  {
-    name: "Wenyi Shen",
-    role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/Wenyi.png"
-  },
-  {
-    name: "Calum Mclatchie",
-    role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/Calum-12.png"
-  },
-  {
-    name: "Romell Gumbs",
-    role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/romell-copy.png"
-  },
-  {
-    name: "Shelin Hakki",
-    role: "Business Setup Advisor",
-    img: "https://www.creativezone.ae/wp-content/uploads/shelinbsa.jpeg"
-  },
-  {
-    name: "Kunal Tamang",
-    role: "Business Setup Advisor",
-    img: "https://s3.eu-west-1.amazonaws.com/cdn.creativezone.ae/assets/kunal-copy.png"
+    img: "/src/images/specialists/james.jpg"
   }
 ];
 
@@ -147,6 +137,8 @@ function renderSpecialists() {
 
   specialists.forEach(s => {
     const slide = document.createElement("div");
+    console.log(s.img);
+    
     slide.className = "swiper-slide";
     slide.innerHTML = `
       <div class="card">
@@ -162,13 +154,13 @@ function renderSpecialists() {
 
   // Init Swiper
   const swiper = new Swiper(".specialists-slider", {
-    loop: true,
+    loop: false,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false
     },
     slidesPerView: 1,
-    spaceBetween: 20,
+    // spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
       clickable: true
