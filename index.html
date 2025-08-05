@@ -504,27 +504,37 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="" class="register-form shadow rounded mb-5" id="registerForm">
-                            <!-- First name -->
-                            <div class="mb-2">
-                                <div class="form-text text-secondary">Full name (required).</div>
-                                <input type="text" class="form-control" name="name" required>
-                            </div>
-                            <!-- Email -->
-                            <div class="mb-2">
-                                <div class="form-text text-secondary">Email (required).</div>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <!-- Phone -->
-                            <div class="mb-2">
-                                <div class="form-text text-secondary">Enter Your number (The call is free)</div>
-                                <div class="d-sm-flex gap-2">
-                                    <input type="tel" id="phone" name="phone" class="form-control phone" id="tel"
-                                        placeholder="50 123 4567">
-                                    <button type="submit" class="mt-sm-0 mt-2 btn bg-red text-white submit">Call me</button>
-                                </div>
-                            </div>
-                        </form>
+                        <form action="https://crm.zoho.com/crm/WebToContactForm" method="POST" class="register-form shadow rounded mb-5" id="registerForm" accept-charset="UTF-8">
+
+  <!-- Zoho Hidden Fields -->
+  <input type="hidden" name="xnQsjsdp" value="e00ab6d833b8081230ac655fe93a4671918ddf44c6fa55d7d962f461debb7205">
+  <input type="hidden" name="xmIwtLD" value="c434b27c301478bbb5efe9f280968c8309ef9b52e60bcfff716323cfc0a82ef43abd18b4f38134e803d0d1d1d4483ce4">
+  <input type="hidden" name="actionType" value="Q29udGFjdHM=">
+  <input type="hidden" name="returnURL" value="null">
+
+  <!-- Full Name → First Name -->
+  <div class="mb-2">
+    <div class="form-text text-secondary">Full name (required).</div>
+    <input type="text" class="form-control" name="First Name" required>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-2">
+    <div class="form-text text-secondary">Email (required).</div>
+    <input type="email" class="form-control" name="Email" required>
+  </div>
+
+  <!-- Phone -->
+  <div class="mb-2">
+    <div class="form-text text-secondary">Enter Your number (The call is free)</div>
+    <div class="d-sm-flex gap-2">
+      <input type="tel" name="Phone" class="form-control phone" placeholder="50 123 4567" required>
+      <button type="submit" class="mt-sm-0 mt-2 btn bg-red text-white submit">Call me</button>
+    </div>
+  </div>
+
+</form>
+
                     </div>
                     <a href="" class="join-btn text-center mb-2">Click here for new jobs</a>
                 </div>
