@@ -364,23 +364,33 @@
 
     }
 
-    right: 0;
+    right: 50px;
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 10px;
-    padding: 10px;
-    bottom: 30px;
+    padding: 10px 15px;
+    bottom: 0;
+   
     button {
         height: max-content;
+        margin-bottom: 5px;
+        &:hover {
+            .fa-phone {
+                color: var(--color-red);
+            }
+        }
     }
     .msg {
         padding: 15px;
         position: static;
         width: 100%;
+        max-width: 300px;
     }
     @media(max-width: 768px) {
     }
 }
+
+
 
 
 @keyframes pulse {

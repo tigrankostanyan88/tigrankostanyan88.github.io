@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
@@ -39,6 +40,7 @@ body.modal-open {
   padding-right: 0 !important;
   overflow: hidden;
   font-family: Raleway, sans-serif;
+  color: #303855;
 }
 
 .text-accent {
@@ -108,8 +110,35 @@ body {
   font-family: NT Somic, sans-serif;
 }
 
-.modal .modal-content {
+.modal-body {
+  min-height: 550px;
+  width: 100%;
   padding: 30px;
+  background: url("https://app.brightcall.ai/images/saved/ded5e494b255d397b03ecaf4c4710e9e0.jpeg") no-repeat center/cover;
+}
+.modal-body img {
+  width: 200px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.modal-body form {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.modal .widgetModal-subTitle {
+  color: #303855;
+}
+.modal .modal-content {
+  position: relative;
+}
+.modal .modal-content .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
 }
 .modal .widgetModal-logo {
   width: 200px;
@@ -137,6 +166,10 @@ body {
   height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+strong {
+  color: #303855;
 }
 
 :root {
@@ -168,6 +201,10 @@ body {
 
 .bg-orange {
   background: #E56752;
+}
+
+.text-dark {
+  color: #303855 !important;
 }
 
 .bg-gradient {
@@ -594,12 +631,12 @@ header .sub-title {
   bottom: -20px;
   right: 100px;
   z-index: 100;
-  right: 0;
+  right: 50px;
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 10px;
-  padding: 10px;
-  bottom: 30px;
+  padding: 10px 15px;
+  bottom: 0;
 }
 .call input {
   height: -moz-max-content;
@@ -652,11 +689,16 @@ header .sub-title {
 .call button {
   height: -moz-max-content;
   height: max-content;
+  margin-bottom: 5px;
+}
+.call button:hover .fa-phone {
+  color: var(--color-red);
 }
 .call .msg {
   padding: 15px;
   position: static;
   width: 100%;
+  max-width: 300px;
 }
 @keyframes pulse {
   0% {

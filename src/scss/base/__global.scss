@@ -66,12 +66,36 @@ body {
   font-family: NT Somic, sans-serif;
 }
 
-
-.modal {
-  .modal-content {
+.modal-body {
+    min-height: 550px;
+    width: 100%;
     padding: 30px;
+    background: url('https://app.brightcall.ai/images/saved/ded5e494b255d397b03ecaf4c4710e9e0.jpeg') no-repeat center/cover;
+    img {
+        width: 200px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    form {
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+}
+.modal {
+  .widgetModal-subTitle {
+    color: #303855;
   }
-
+  .modal-content {
+    position: relative;
+    .btn-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1;
+    }
+  }
   .widgetModal-logo {
     width: 200px;
     display: block;
@@ -102,4 +126,8 @@ body {
     object-fit: contain;
   }
 
+}
+
+strong {
+  color: #303855;
 }
