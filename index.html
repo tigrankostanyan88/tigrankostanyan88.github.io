@@ -108,53 +108,77 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mb-5">
-                        <form class="register-form needs-validation" novalidate>
+                  <div class="col-lg-4 mb-5">
+                        <form class="register-form needs-validation" novalidate id="register"
+                            action="https://crm.zoho.com/crm/WebToContactForm" method="POST" accept-charset="UTF-8">
+
+                            <!-- Zoho Hidden Fields -->
+                            <input type="hidden" name="xnQsjsdp"
+                                value="e00ab6d833b8081230ac655fe93a4671918ddf44c6fa55d7d962f461debb7205">
+                            <input type="hidden" name="xmIwtLD"
+                                value="c434b27c301478bbb5efe9f280968c8309ef9b52e60bcfff716323cfc0a82ef43abd18b4f38134e803d0d1d1d4483ce4">
+                            <input type="hidden" name="actionType" value="Q29udGFjdHM=">
+                            <input type="hidden" name="returnURL" value="null">
+
                             <!-- First Name -->
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="First Name *" required>
+                                <label for="First_Name">First Name</label>
+                                <input type="text" class="form-control" id="First_Name" name="First Name" maxlength="40"
+                                    required />
                                 <div class="invalid-feedback">The field is required.</div>
                             </div>
 
                             <!-- Last Name -->
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Last Name *" required>
+                                <label for="Last_Name">Last Name *</label>
+                                <input type="text" class="form-control" id="Last_Name" name="Last Name" maxlength="80"
+                                    required />
                                 <div class="invalid-feedback">The field is required.</div>
                             </div>
 
-                            <!-- Email address -->
+                            <!-- Email -->
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email *" required>
+                                <label for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" name="Email" maxlength="100"
+                                    required />
                                 <div class="invalid-feedback">The field is required.</div>
                             </div>
 
                             <!-- Phone Number -->
                             <div class="mb-3">
-                                <input type="tel" class="form-control phone" placeholder="50 123 4567" required>
+                                <label for="Phone">Phone Number</label>
+                                <input type="tel" class="form-control phone" id="Phone" name="Phone"
+                                    placeholder="50 123 4567" required />
                                 <div class="invalid-feedback">The field is required.</div>
                             </div>
 
                             <!-- Message -->
                             <div class="mb-3">
-                                <textarea name="message" class="form-control" placeholder="What type of business you are looking to set up? *"  required></textarea>
+                                <label for="Message">Message</label>
+                                <textarea name="Description" id="Message" class="form-control"
+                                    placeholder="What type of business you are looking to set up? *"
+                                    required></textarea>
                                 <div class="invalid-feedback">The field is required.</div>
                             </div>
 
+                            <!-- Consent Note -->
                             <small class="all-bg-white d-block mb-2" style="font-size: 9px;line-height: .9rem;">
                                 By submitting this form, you agree to the Terms and Privacy Policy of CREATIVE ZONE.
                                 I consent to CREATIVE ZONE collecting my name, email address and phone number and
-                                contacting me
-                                either by the email address or phone number supplied.
+                                contacting me either by the email address or phone number supplied.
                             </small>
 
                             <!-- Submit Button -->
                             <button class="btn d-block btn-cz-blue w-100" type="submit">Submit</button>
 
                             <!-- General Error Message -->
-                            <div id="warning-msg" class="needs-validation mb-4 mt-5 border border-2 border-warning py-2 px-3">
+                            <div id="warning-msg"
+                                class="needs-validation mb-4 mt-5 border border-2 border-warning py-2 px-3 d-none">
                                 <p class="mb-0">One or more fields have an error. Please check and try again.</p>
                             </div>
+
                         </form>
+
 
                     </div>
                 </div>
