@@ -127,6 +127,11 @@ body {
   padding: 15px;
   border: 1px solid #ccc;
 }
+@media (max-width: 768px) {
+  .modal-body {
+    padding: 0;
+  }
+}
 
 .modal .widgetModal-subTitle {
   color: #303855;
@@ -262,6 +267,7 @@ header {
 }
 header .container {
   max-width: 1400px;
+  padding: 0;
 }
 header .brand-logo {
   width: 300px;
@@ -304,20 +310,20 @@ header .price-box .price-label {
   display: inline-block;
   padding: 10px 30px;
   font-weight: bold;
-  line-height: 1.2;
   font-size: 23px;
 }
 header .price-box .price-amount {
   display: inline-block;
   background: var(--color-gradient);
   color: var(--color-white);
-  padding: 5px 40px;
+  padding: 10px 40px;
   height: 100%;
   font-size: 50px;
   font-weight: bold;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
+  right: 20px;
   z-index: 2;
 }
 header .eyebrow {
@@ -638,6 +644,11 @@ header .sub-title {
   padding: 10px 15px;
   bottom: 0;
 }
+@media (max-width: 768px) {
+  .call {
+    right: 0;
+  }
+}
 .call input {
   height: -moz-max-content;
   height: max-content;
@@ -648,6 +659,11 @@ header .sub-title {
   position: relative;
   border: none;
   outline: none;
+}
+@media screen and (max-width: 576px) {
+  .call .btn {
+    font-size: 20px;
+  }
 }
 .call .btn:hover {
   background: #fff;

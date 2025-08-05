@@ -78,9 +78,13 @@ body {
         margin-bottom: 20px;
     }
     form {
-        background: #fff;
-        padding: 15px;
-        border: 1px solid #ccc;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+    @media(max-width: 768px) {
+        padding: 0;
     }
 }
 .modal {

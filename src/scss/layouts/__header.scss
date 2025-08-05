@@ -16,6 +16,7 @@ header {
    background: url('../images/header/image-bg.png') no-repeat center/cover;
    .container {
       max-width: 1400px;
+      padding: 0;
    }
    .brand-logo {
       width: 300px;
@@ -52,7 +53,6 @@ header {
          display: inline-block;
          padding: 10px 30px;
          font-weight: bold;
-         line-height: 1.2;
          font-size: 23px;
       }
 
@@ -60,13 +60,14 @@ header {
          display: inline-block;
          background: var(--color-gradient);
          color: var(--color-white);
-         padding: 5px 40px;
+         padding: 10px 40px;
          height: 100%;
          font-size: 50px;
          font-weight: bold;
          border-top-right-radius: 15px;
          border-bottom-right-radius: 15px;
          position: relative;
+         right: 20px;
          z-index: 2;
       }
    }
