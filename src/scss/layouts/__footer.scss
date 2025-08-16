@@ -1,4 +1,12 @@
 footer {
-    background: #18233F;
+    background: #000;
     color: #fff;
+    padding-top: 30px;
+
+    a {
+        color: var(--color-accent);
+        &:hover {
+            opacity: 0.6;
+        }
+    }
 }

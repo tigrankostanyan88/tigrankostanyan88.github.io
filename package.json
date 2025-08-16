@@ -1,0 +1,14 @@
+{
+  "name": "osteos_new",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "openai": "^4.26.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

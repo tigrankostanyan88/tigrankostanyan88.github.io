@@ -1,32 +1,18 @@
 :root {
-    --color-accent: #0A1E41;
-    --color-gradient: linear-gradient(260deg,#680a1b 0%, #C40A2D 100%);
+    --color-accent: #00B8B0;
     --color-primary: #00B8B0;
     --color-secondary: #F9F7F3;
     --color-text-dark: #2E2E2E;
     --color-text-ligth: #fff;
     --color-bg-light: #E8E8E8;
-    --color-red: #C40A2D;
     --color-white: #FFFFFF;
-    --color-section: #F1F2F2;
-    --color-theme: linear-gradient(90deg, #000, #0b1232);
-    --color-card-gradient: linear-gradient(90deg, #121215, #1e253b);
+    --color-theme: #fafafa;
 }
 
-.text-red {
-    color: var(--color-red);
-}
-.bg-red {
-    background: var(--color-red);
+.text-accent {
+    color: var(--color-accent);
 }
 
-.text-orange {
-    color: #E56752;
+.bg-accent {
+    background: var(--color-accent);
 }
-.bg-orange {
-    background: #E56752;
-}
-
-.text-dark {
-    color: #303855 !important;
-} 

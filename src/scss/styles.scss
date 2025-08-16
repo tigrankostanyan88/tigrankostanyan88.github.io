@@ -1,11 +1,3 @@
-@use './base/_main' as *;
-@use './components/_main' as *;
-@use './layouts/_main' as *;
-
-
-ul li {
-      position: relative;
-    //   @include base.icon;
-      margin-bottom: 10px;
-      font-size: 23px;
-   }
+@use './base/_main' as base;
+@use './components/_main' as components;
+@use './layouts/_main' as layouts;
